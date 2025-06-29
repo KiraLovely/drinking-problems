@@ -1,0 +1,237 @@
+
+/*---Grid Layout---*/
+
+body {
+    background-color: black;
+    color: white;
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 3fr 1fr 3fr 1fr;
+    grid-template-areas:
+            "navBar"
+            "header"
+            "socials"
+            "main"
+            "footer";
+}
+
+
+/*Heading*/
+
+header {
+    background-color: aquamarine;
+    grid-area: header;
+
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#title {
+    background-color: blue;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+}
+
+
+/*Navigation Bar*/
+
+nav {
+    background-color: lightcoral;;
+    grid-area: navBar;
+    position:sticky;
+    top:0;
+
+    align-content: center;
+    align-items: center;
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: repeat(7,auto);
+    grid-template-areas:"logo cups consumables merch vcards partners searchBar";
+}
+
+#1 {
+    grid-area: logo;
+}
+#2 {
+    grid-area: cups;
+}
+#3 {
+    grid-area: consumables;
+}
+#4 {
+    grid-area: merch;
+}
+#5 {
+    grid-area: vcards;
+}
+#6 {
+    grid-area: partners;
+}
+#7 {
+    grid-area: searchBar;
+}
+
+
+/*Social Buttons*/
+
+#socials {
+    background-color: palegreen;
+    grid-area: socials;
+
+    align-content: center;
+    align-items: center;
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+            "sleft . sright"
+            ". categories .";
+}
+
+#sleft {
+    background-color: green;
+    grid-area: sleft;
+
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+
+    display:grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+            ". OurS OurS ."
+            "OurSa OurSb OurSc OurSd";
+}
+#s1 {
+    grid-area: OurS;
+}
+#sA {
+    grid-area: OurSa;
+}
+#sB {
+    grid-area: OurSb;
+}
+#sC {
+    grid-area: OurSc;
+}
+#sD {
+    grid-area: OurSd;
+}
+
+#sright {
+    background-color: green;
+    grid-area: sright;
+
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+
+    display:grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+            "GGS GGS GGS"
+            "OurSga OurSgb OurSgc";
+}
+#s2 {
+    grid-area: GGS;
+}
+#sgA {
+    grid-area: OurSga;
+    overflow: hidden;
+}
+#sgB {
+    grid-area: OurSgb;
+    overflow: hidden;
+}
+#sgC {
+    grid-area: OurSgc;
+    overflow: hidden;
+}
+#cat {
+    background-color: lawngreen;
+    grid-area: categories;
+
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.Social_Button {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border-radius: 100%;
+    grid-area: SButton;
+    margin: 2px;
+
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+/*Category Bar*/
+
+main {
+    background-color: palegoldenrod;
+    grid-area: main;
+
+    align-content: center;
+    align-items: center;
+    text-align: center;
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 23%;
+
+    overflow-x: auto;
+    overscroll-behavior: contain;
+}
+
+.Banner {
+    background-color: black;
+    width: 354px;
+    height: 604px;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/*Footer*/
+
+footer {
+    background-color: mediumpurple;
+    grid-area: footer;
+
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-areas: "fleft . fright";
+}
+
+#fleft {
+    background-color: rebeccapurple;
+    grid-area: fleft;
+
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+#fright {
+    background-color: rebeccapurple;
+    grid-area: fright;
+
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
