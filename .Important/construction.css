@@ -1,0 +1,36 @@
+body {
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(3,auto) ;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+            "warning warning warning"
+            ". password ."
+            "warning2 warning2 warning2";
+
+    align-content: center;
+    text-align: center;
+}
+
+#construction_enter {
+    grid-area: password;
+    align-content: center;
+    text-align: center;
+    margin: auto;
+    padding: 0;
+    border: 0;
+    color: white;
+}
+
+#warning_tape {
+    grid-area: warning;
+    margin:auto;
+    padding: 0;
+    border: 0;
+}
+#warning_tape_ {
+    grid-area: warning2;
+    margin:auto;
+    padding: 0;
+    border: 0;
+}
