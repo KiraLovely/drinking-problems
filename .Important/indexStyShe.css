@@ -11,7 +11,7 @@ body {
     grid-template-areas:
             "navBar"
             "header"
-            "socials"
+            "main_title"
             "main"
             "footer";
 }
@@ -79,23 +79,36 @@ nav {
 }
 
 
-/*Social Buttons*/
+/*Footer*/
 
-#socials {
-    background-color: palegreen;
-    grid-area: socials;
+footer {
+    background-color: mediumpurple;
+    grid-area: footer;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr 3fr 1fr 1fr;
+    grid-template-areas: "fleft . sleft sright . fright";
+}
+
+#fleft {
+    background-color: rebeccapurple;
+    grid-area: fleft;
 
     align-content: center;
     align-items: center;
     text-align: center;
-
-    display: grid;
-    grid-template-columns: 1fr 8fr 1fr;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-            "sleft . sright"
-            ". categories .";
 }
+#fright {
+    background-color: rebeccapurple;
+    grid-area: fright;
+
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+/*Social Buttons*/
 
 #sleft {
     background-color: green;
@@ -104,7 +117,7 @@ nav {
     align-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
+    margin: auto;
 
     display:grid;
     grid-template-columns: auto auto auto auto;
@@ -136,7 +149,7 @@ nav {
     align-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
+    margin: auto;
 
     display:grid;
     grid-template-columns: auto auto auto;
@@ -181,7 +194,19 @@ nav {
     align-items: center;
     text-align: center;
 }
+
+
 /*Category Bar*/
+#main_title {
+    grid-area: main_title;
+    background-color: hotpink;
+
+    align-items: center;
+    align-content: center;
+    text-align: center;
+
+    font-size: 250%;
+}
 
 main {
     background-color: palegoldenrod;
@@ -194,6 +219,7 @@ main {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 23%;
+    column-gap: 30px;
 
     overflow-x: auto;
     overscroll-behavior: contain;
@@ -203,34 +229,6 @@ main {
     background-color: black;
     width: 354px;
     height: 604px;
-    align-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-/*Footer*/
-
-footer {
-    background-color: mediumpurple;
-    grid-area: footer;
-
-    display: grid;
-    grid-template-columns: 1fr 8fr 1fr;
-    grid-template-areas: "fleft . fright";
-}
-
-#fleft {
-    background-color: rebeccapurple;
-    grid-area: fleft;
-
-    align-content: center;
-    align-items: center;
-    text-align: center;
-}
-#fright {
-    background-color: rebeccapurple;
-    grid-area: fright;
-
     align-content: center;
     align-items: center;
     text-align: center;
