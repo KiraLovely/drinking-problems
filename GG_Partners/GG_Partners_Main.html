@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="Partners_StyShe.css">
     <link rel="icon" href="../Images/LogoSmall.ico">
+    <link rel="stylesheet" href="../.Important/universal.css">
 
     <title>GG-Vault</title>
 </head>
@@ -28,15 +29,65 @@
     <p id="7">search</p>
 </nav>
 
-<main>
-    gurt:yo
-</main>
-
 <footer>
     <a id="fleft" title="View frequently asked questions" href="../FAQ/FAQ_Main.html">FAQ</a>
     <a id="fright" title="View our Copyright, whatever" href="../Copyright/Copyright_Page.html">Copyright</a>
+
+    <div id="sleft">
+        <p id="s1">Our Socials</p>
+        <a class="Social_Button" id="sA"></a>
+        <a class="Social_Button" id="sB"></a>
+        <a class="Social_Button" id="sC"></a>
+        <a class="Social_Button" id="sD"></a>
+    </div>
+
+    <div id="sright">
+
+        <p id="s2">Gamersupps Socials</p>
+
+        <a class="Social_Button" id="sgA" target="_blank" href="https://x.com/gamersupps">
+            <img src="../Images/X_Logo.png" height="50px">
+        </a>
+
+        <a class="Social_Button" id="sgB" target="_blank" href="https://www.instagram.com/gamersupps/">
+            <img src="../Images/insta_logo.png" height="50px">
+        </a>
+
+        <a class="Social_Button" id="sgC" target="_blank" href="https://www.tiktok.com/@gamersupps?source=h5_m">
+            <img src="../Images/tiktok_logo.png" height="50px">
+        </a>
+
+    </div>
 </footer>
 
+
+<div id="partner-container"></div>
+
+<script>
+    fetch('http://localhost/gamersupps-api/get_partners.php')
+        .then(response => response.json())
+        .then(partners => {
+            const container = document.getElementById('partner-container');
+
+            partners.forEach(partner => {
+                const card = document.createElement('div');
+                card.classList.add('partner-card');
+
+                card.innerHTML = `
+            <img src="${partner.avatar_url}" class="partner-avatar" alt="${partner.name}">
+            <h3>${partner.name}</h3>
+            <p><strong>Status:</strong> ${partner.status}</p>
+            <p><strong>First appearance:</strong> ${partner.first_appearance}</p>
+            <p><strong>Twitter:</strong> <a href="${partner.socials?.twitter}" target="_blank">${partner.socials?.twitter}</a></p>
+          `;
+
+                container.appendChild(card);
+            });
+        })
+        .catch(error => {
+            console.error('Error loading partners:', error);
+        });
+</script>
 
 </body>
 </html>
