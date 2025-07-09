@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 08. Jul 2025 um 22:49
--- Server-Version: 10.4.32-MariaDB
--- PHP-Version: 8.0.30
+-- Generation Time: Jul 09, 2025 at 01:13 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Datenbank: `gamersupps`
+-- Database: `gamersupps`
 --
 
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `partners`
+-- Table structure for table `partners`
 --
 
 CREATE TABLE `partners` (
@@ -32,12 +32,12 @@ CREATE TABLE `partners` (
   `name` varchar(255) NOT NULL,
   `avatar_url` text NOT NULL,
   `first_appearance` date NOT NULL,
-  `socials` text NOT NULL,
+  `socials` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`socials`)),
   `status` enum('active','inactive','former') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Daten für Tabelle `partners`
+-- Dumping data for table `partners`
 --
 
 INSERT INTO `partners` (`id`, `name`, `avatar_url`, `first_appearance`, `socials`, `status`) VALUES
@@ -49,27 +49,28 @@ INSERT INTO `partners` (`id`, `name`, `avatar_url`, `first_appearance`, `socials
 (8, 'Filian', 'https://uploads-ssl.webflow.com/6473d6c34e7dfa20061411e2/6494736732b08079439e9f59_fillian.png', '2022-06-05', '{\"twitter\":\"https://twitter.com/filianIsLost\"}', 'active'),
 (9, 'PointCrow', 'https://th.bing.com/th/id/OSK.834281d0b713863fc4848399e8b7b15f?w=102&h=102&c=7&o=6&pid=SANGAM', '2021-09-30', '{\"twitter\":\"https://twitter.com/PointCrow\"}', 'former'),
 (10, 'Emiru', 'https://cdn.pfps.gg/pfps/1216-emiru-1.png', '2022-08-15', '{\"twitter\":\"https://twitter.com/Emiru\"}', 'active'),
-(11, 'Trickywi', 'https://tse1.mm.bing.net/th/id/OIP.a_Jr1d0oNpd6nLYhL_KDJAAAAA?rs=1&pid=ImgDetMain&o=7&rm=3', '2021-05-10', '{\"twitter\":\"https://twitter.com/Trickywi\"}', 'former');
+(11, 'Trickywi', 'https://tse1.mm.bing.net/th/id/OIP.a_Jr1d0oNpd6nLYhL_KDJAAAAA?rs=1&pid=ImgDetMain&o=7&rm=3', '2021-05-10', '{\"twitter\":\"https://twitter.com/Trickywi\"}', 'former'),
+(12, 'CaseOh', 'https://static-cdn.jtvnw.net/jtv_user_pictures/ef28ba12-c8ed-46d4-838b-a4c95ef5b469-profile_image-300x300.png', '2023-05-31', '{\"twitter\":\"https://x.com/CaseOh__/with_replies\"}', 'active');
 
 --
--- Indizes der exportierten Tabellen
+-- Indexes for dumped tables
 --
 
 --
--- Indizes für die Tabelle `partners`
+-- Indexes for table `partners`
 --
 ALTER TABLE `partners`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT für exportierte Tabellen
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT für Tabelle `partners`
+-- AUTO_INCREMENT for table `partners`
 --
 ALTER TABLE `partners`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

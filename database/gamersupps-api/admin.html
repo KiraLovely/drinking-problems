@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="author" content="Kira">
+   <link rel="stylesheet" href="admin.css">
+
+   <title>Admin</title>
+</head>
+<body>
+
+<form action="add_partner.php" method="POST">
+   <label>Name: <input type="text" name="name" required></label><br>
+
+   <label>Status:
+      <select name="status" required>
+         <option value="active">Active</option>
+         <option value="inactive">Inactive</option>
+         <option value="former">Former</option>
+      </select>
+   </label><br>
+
+   <label>First Appearance: <input type="date" name="first_appearance"></label><br>
+   <label>Avatar URL: <input type="url" name="avatar_url"></label><br>
+   <label>Twitter URL: <input type="url" name="twitter"></label><br>
+   <button type="submit">Add Partner</button>
+</form>
+
+</body>
+</html>

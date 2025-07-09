@@ -1,7 +1,7 @@
 /*Navigation Bar*/
 
 nav {
-    background-color: lightcoral;;
+    background-color: #7b2cbf;
     grid-area: navBar;
     position:sticky;
     top:0;
@@ -43,14 +43,43 @@ nav {
 footer {
     background-color: mediumpurple;
     grid-area: footer;
+    font-family: sans-serif, 'Inter Semi Bold';
 
     display: grid;
     grid-template-columns: 1fr 1fr 3fr 3fr 1fr 1fr;
-    grid-template-areas: "fleft . sleft sright . fright";
+    grid-template-rows: repeat(4,1fr);
+    grid-template-areas:
+            "news_letter_sign news_letter_sign news_letter_sign expl_text expl_text expl_text"
+            "write_us_mail write_us_mail write_us_mail expl_text expl_text expl_text"
+            "our_partners our_partners our_partners expl_text expl_text expl_text"
+            "fleft . sleft sright . fright";
+}
+#news_letter_signup {
+    grid-area: news_letter_sign;
+    align-content: center;
+    align-items: center;
+    margin-left: 4vw;
+}
+#write_mail_form {
+    grid-area: write_us_mail;
+    align-content: center;
+    align-items: center;
+    margin-left: 4vw;
+}
+#explanation_text {
+    grid-area: expl_text;
+    align-content: center;
+    margin-right: 1vw;
+}
+#archive_partners {
+    grid-area: our_partners;
+    align-content: center;
+    align-items: center;
+    margin-left: 4vw;
 }
 
+
 #fleft {
-    background-color: rebeccapurple;
     grid-area: fleft;
 
     align-content: center;
@@ -58,7 +87,6 @@ footer {
     text-align: center;
 }
 #fright {
-    background-color: rebeccapurple;
     grid-area: fright;
 
     align-content: center;
@@ -70,7 +98,6 @@ footer {
 /*Social Buttons*/
 
 #sleft {
-    background-color: green;
     grid-area: sleft;
 
     align-content: center;
@@ -102,7 +129,6 @@ footer {
 }
 
 #sright {
-    background-color: green;
     grid-area: sright;
 
     align-content: center;

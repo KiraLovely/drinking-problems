@@ -1,0 +1,25 @@
+body {
+    background-color: #212529;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+form {
+    margin-top: 10%;
+    margin-left: 25%;
+    font-size: 250%;
+    background-color: #343a40;
+    color: white;
+    width: 50%;
+    border: 2px solid whitesmoke;
+}
+button {
+    font-size: 75%;
+}
+input {
+    font-size: 75%;
+}
+select {
+    padding: 1% 20% 1% 20%
+}
