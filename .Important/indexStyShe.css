@@ -7,7 +7,7 @@ body {
 
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: auto 3fr 1fr 3fr 1fr;
+    grid-template-rows: auto 45vw auto 1fr 1fr;
     grid-template-areas:
             "navBar"
             "header"
@@ -20,8 +20,9 @@ body {
 /*Heading*/
 
 header {
-    background-color: aquamarine;
+    background-color: #212529;
     grid-area: header;
+    font-family: sans-serif, 'Inter Semi Bold';
 
     align-content: center;
     align-items: center;
@@ -39,167 +40,11 @@ header {
 }
 
 
-/*Navigation Bar*/
-
-nav {
-    background-color: lightcoral;;
-    grid-area: navBar;
-    position:sticky;
-    top:0;
-
-    align-content: center;
-    align-items: center;
-    text-align: center;
-
-    display: grid;
-    grid-template-columns: repeat(7,auto);
-    grid-template-areas:"logo cups consumables merch vcards partners searchBar";
-}
-
-#1 {
-    grid-area: logo;
-}
-#2 {
-    grid-area: cups;
-}
-#3 {
-    grid-area: consumables;
-}
-#4 {
-    grid-area: merch;
-}
-#5 {
-    grid-area: vcards;
-}
-#6 {
-    grid-area: partners;
-}
-#7 {
-    grid-area: searchBar;
-}
-
-
-/*Footer*/
-
-footer {
-    background-color: mediumpurple;
-    grid-area: footer;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 3fr 3fr 1fr 1fr;
-    grid-template-areas: "fleft . sleft sright . fright";
-}
-
-#fleft {
-    background-color: rebeccapurple;
-    grid-area: fleft;
-
-    align-content: center;
-    align-items: center;
-    text-align: center;
-}
-#fright {
-    background-color: rebeccapurple;
-    grid-area: fright;
-
-    align-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-
-/*Social Buttons*/
-
-#sleft {
-    background-color: green;
-    grid-area: sleft;
-
-    align-content: center;
-    align-items: center;
-    text-align: center;
-    margin: auto;
-
-    display:grid;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-            ". OurS OurS ."
-            "OurSa OurSb OurSc OurSd";
-}
-#s1 {
-    grid-area: OurS;
-}
-#sA {
-    grid-area: OurSa;
-}
-#sB {
-    grid-area: OurSb;
-}
-#sC {
-    grid-area: OurSc;
-}
-#sD {
-    grid-area: OurSd;
-}
-
-#sright {
-    background-color: green;
-    grid-area: sright;
-
-    align-content: center;
-    align-items: center;
-    text-align: center;
-    margin: auto;
-
-    display:grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-            "GGS GGS GGS"
-            "OurSga OurSgb OurSgc";
-}
-#s2 {
-    grid-area: GGS;
-}
-#sgA {
-    grid-area: OurSga;
-    overflow: hidden;
-}
-#sgB {
-    grid-area: OurSgb;
-    overflow: hidden;
-}
-#sgC {
-    grid-area: OurSgc;
-    overflow: hidden;
-}
-#cat {
-    background-color: lawngreen;
-    grid-area: categories;
-
-    align-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.Social_Button {
-    width: 50px;
-    height: 50px;
-    background-color: black;
-    border-radius: 100%;
-    grid-area: SButton;
-    margin: 2px;
-
-    align-content: center;
-    align-items: center;
-    text-align: center;
-}
-
 
 /*Category Bar*/
 #main_title {
     grid-area: main_title;
-    background-color: hotpink;
+    background-color: #343a40;
 
     align-items: center;
     align-content: center;
@@ -209,7 +54,7 @@ footer {
 }
 
 main {
-    background-color: palegoldenrod;
+    background-color: #343a40;
     grid-area: main;
 
     align-content: center;
