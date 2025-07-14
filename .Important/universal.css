@@ -2,6 +2,7 @@
 
 nav {
     background-color: #7b2cbf;
+    font-family: sans-serif, 'Inter Semi Bold';
     grid-area: navBar;
     position:sticky;
     top:0;
@@ -41,7 +42,7 @@ nav {
 /*Footer*/
 
 footer {
-    background-color: mediumpurple;
+    background-color: rebeccapurple;
     grid-area: footer;
     font-family: sans-serif, 'Inter Semi Bold';
 

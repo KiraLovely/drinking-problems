@@ -7,7 +7,7 @@ body {
 
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: auto 45vw auto 1fr 1fr;
+    grid-template-rows: auto 47vw auto 35vw 1fr;
     grid-template-areas:
             "navBar"
             "header"
@@ -20,7 +20,7 @@ body {
 /*Heading*/
 
 header {
-    background-color: #212529;
+    background-color: #000000;
     grid-area: header;
     font-family: sans-serif, 'Inter Semi Bold';
 
@@ -44,7 +44,8 @@ header {
 /*Category Bar*/
 #main_title {
     grid-area: main_title;
-    background-color: #343a40;
+    background-color: #020204;
+    font-family: sans-serif, 'Inter Semi Bold';
 
     align-items: center;
     align-content: center;
@@ -54,7 +55,7 @@ header {
 }
 
 main {
-    background-color: #343a40;
+    background-image: linear-gradient(black, black, #252525);
     grid-area: main;
 
     align-content: center;
@@ -71,10 +72,13 @@ main {
 }
 
 .Banner {
-    background-color: black;
     width: 354px;
     height: 604px;
     align-content: center;
     align-items: center;
     text-align: center;
+}
+main img {
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px whitesmoke ;
 }
