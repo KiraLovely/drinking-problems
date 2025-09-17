@@ -1,7 +1,9 @@
-/*Navigation Bar*/
 
+
+/*Navigation Bar*/
 nav {
     background-color: #7b2cbf;
+    color: white;
     font-family: sans-serif, 'Inter Semi Bold';
     grid-area: navBar;
     position:sticky;
@@ -16,35 +18,69 @@ nav {
     grid-template-areas:"logo cups consumables merch vcards partners searchBar";
 }
 
-#1 {
+#Home_Nav {
     grid-area: logo;
+    display: inline-block;
+    transition: transform 0.2s;
 }
-#2 {
+#WaifuCups_Nav {
     grid-area: cups;
 }
-#3 {
+#Consumables_Nav {
     grid-area: consumables;
 }
-#4 {
+#Merch_Nav {
     grid-area: merch;
 }
-#5 {
+#VCards_Nav {
     grid-area: vcards;
 }
-#6 {
+#Partners_Nav {
     grid-area: partners;
 }
-#7 {
+#Search_Nav {
     grid-area: searchBar;
+}
+
+#HomeImg_Nav:hover {
+    animation: shake 0.4s ease-in-out;
+}
+@keyframes shake {
+    0% { transform: translateX(0);}
+    25% { transform: translateX(-3px);}
+    50% { transform: translateX(3px);}
+    75% { transform: translateX(-3px);}
+    100% { transform: translateX(0);}
+}
+
+.Underline_Animation {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+.Underline_Animation::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #5a189a;
+    transition: width 0.8s ease;
+}
+.Underline_Animation:hover::after {
+    width: 33%;
 }
 
 
 /*Footer*/
-
 footer {
     background-color: rebeccapurple;
+    color: white;
     grid-area: footer;
     font-family: sans-serif, 'Inter Semi Bold';
+    padding-bottom: 4vw;
 
     display: grid;
     grid-template-columns: 1fr 1fr 3fr 3fr 1fr 1fr;
@@ -97,7 +133,6 @@ footer {
 
 
 /*Social Buttons*/
-
 #sleft {
     grid-area: sleft;
 
@@ -179,4 +214,17 @@ footer {
     align-content: center;
     align-items: center;
     text-align: center;
+}
+
+
+/*Hyperlink Styling*/
+a:visited {
+    color: white;
+}
+a:link {
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    color: lightgray;
 }

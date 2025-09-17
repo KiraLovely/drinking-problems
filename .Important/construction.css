@@ -10,6 +10,7 @@ body {
 
     align-content: center;
     text-align: center;
+    margin-top: 15%;
 }
 
 #construction_enter {
@@ -20,17 +21,4 @@ body {
     padding: 0;
     border: 0;
     color: white;
-}
-
-#warning_tape {
-    grid-area: warning;
-    margin:auto;
-    padding: 0;
-    border: 0;
-}
-#warning_tape_ {
-    grid-area: warning2;
-    margin:auto;
-    padding: 0;
-    border: 0;
 }
