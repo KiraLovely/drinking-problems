@@ -1,0 +1,58 @@
+body {
+    background-color: black;
+    color: white;
+
+
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto 4vw auto 1fr ;
+    grid-template-areas:
+            "navBar navBar"
+            "banner header"
+            "banner main"
+            "footer footer";
+}
+
+
+header {
+    background-color: black;
+    grid-area: header;
+}
+
+#waifucup-container {
+    border-radius: 3px;
+    background-color: #252525;
+    grid-area: main;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/*Card Design*/
+.waifucup-card {
+    border: 2px solid #5a189a;
+    color: white;
+    border-radius: 8px;
+    padding: 1em;
+    margin-bottom: 1em;
+    max-width: 300px;
+    background-color: #343a40;
+}
+.partner-avatar {
+    width: 100px;
+    border-radius: 50%;
+    background-color: greenyellow;
+}
+
+#banner {
+    background-image: linear-gradient(black, black, #252525);
+    grid-area: banner;
+    align-content: center;
+    text-align: center;
+}
+#banner img {
+    border-radius: 3px;
+    box-shadow: 1px 1px 5px whitesmoke ;
+}

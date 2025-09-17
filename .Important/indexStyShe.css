@@ -1,5 +1,5 @@
 
-/*---Grid Layout---*/
+/*Grid Layout*/
 
 body {
     background-color: black;
@@ -30,12 +30,12 @@ header {
 }
 
 #title {
-    background-color: blue;
+    background-color: rebeccapurple;
     align-content: center;
     align-items: center;
     text-align: center;
-    width: 400px;
-    height: 400px;
+    width: 25vw;
+    height: 25vw;
     margin: auto;
 }
 
@@ -78,7 +78,11 @@ main {
     align-items: center;
     text-align: center;
 }
-main img {
+.Banner_Animation {
     border-radius: 8px;
-    box-shadow: 1px 1px 5px whitesmoke ;
+    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.15);
+    transition: box-shadow 0.3s ease-in-out;
+}
+.Banner_Animation:hover {
+    box-shadow: 1px 2px 5px rgba(255, 255, 255, 0.7)
 }
