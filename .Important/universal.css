@@ -4,7 +4,9 @@
 nav {
     background-color: #7b2cbf;
     color: white;
-    font-family: sans-serif, 'Inter Semi Bold';
+    font-family: sans-serif, 'Montserrat';
+    font-optical-sizing: auto;
+    font-weight: 900;
     grid-area: navBar;
     position:sticky;
     top:0;
@@ -79,7 +81,8 @@ footer {
     background-color: rebeccapurple;
     color: white;
     grid-area: footer;
-    font-family: sans-serif, 'Inter Semi Bold';
+    font-family: sans-serif, 'JetBrains Mono Medium';
+    font-weight: bold;
     padding-bottom: 4vw;
 
     display: grid;
@@ -90,6 +93,12 @@ footer {
             "write_us_mail write_us_mail write_us_mail expl_text expl_text expl_text"
             "our_partners our_partners our_partners expl_text expl_text expl_text"
             "fleft . sleft sright . fright";
+}
+footer h2 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
 }
 #news_letter_signup {
     grid-area: news_letter_sign;
