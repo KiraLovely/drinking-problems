@@ -22,7 +22,6 @@ body {
 header {
     background-color: #000000;
     grid-area: header;
-    font-family: sans-serif, 'Inter Semi Bold';
 
     align-content: center;
     align-items: center;
@@ -48,7 +47,7 @@ header {
 #main_title {
     grid-area: main_title;
     background-color: #020204;
-    font-family: sans-serif, 'Inter Semi Bold';
+    font-family: sans-serif, 'Montserrat';
 
     align-items: center;
     align-content: center;
@@ -67,8 +66,8 @@ main {
 
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 23%;
-    column-gap: 30px;
+    grid-auto-columns: 19%;
+    column-gap: 3vw;
     padding: 1vw;
 
     overflow-x: auto;
@@ -76,8 +75,6 @@ main {
 }
 
 .Banner {
-    width: 354px;
-    height: 604px;
     align-content: center;
     align-items: center;
     text-align: center;
