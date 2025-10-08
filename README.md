@@ -8,7 +8,7 @@ From forgotten products like the 2020 Corona Virus Merch,
 to the oh so beloved Blo'Hole Blast.
 
 
-----------A bit about me and this projects idea-------------
+---------- A bit about me and this projects idea -------------
 
 I'm not alone on this, currently, I have a friend who helps me.
 He's the guy who will make everything and anything art based.

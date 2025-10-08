@@ -1,4 +1,9 @@
-
+body {
+    font-family: "JetBrains Mono Medium", sans-serif;
+}
+body h1, h2 {
+    font-family: "Montserrat", sans-serif;
+}
 
 /*Navigation Bar*/
 nav {
@@ -94,7 +99,7 @@ footer {
             "our_partners our_partners our_partners expl_text expl_text expl_text"
             "fleft . sleft sright . fright";
 }
-footer h2 {
+footer h2, h1 {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 900;
