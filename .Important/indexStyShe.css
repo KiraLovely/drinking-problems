@@ -71,8 +71,22 @@ main {
     padding: 1vw;
 
     overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    cursor: grab;
+    user-select: none;
+    -ms-overflow-style: none;
     overscroll-behavior: contain;
 }
+main::-webkit-scrollbar {
+    display: none;
+}
+main:focus {
+    outline: 3px solid white;
+    outline-offset: 4px;
+}
+
 
 .Banner {
     align-content: center;
