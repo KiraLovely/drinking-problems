@@ -8,7 +8,7 @@ From forgotten products like the 2020 Corona Virus Merch,
 to the oh so beloved Blo'Hole Blast.
 
 
----------- A bit about me and this projects idea -------------
+------------- A bit about me and this projects idea -------------
 
 I'm not alone on this, currently, I have a friend who helps me.
 He's the guy who will make everything and anything art based.
@@ -28,3 +28,31 @@ because I think it's fun, and I want to do this as a living in the future.
 
 If for whatever reason you decided to visit this weird project, and even read trough this,
 thanks, firstly. And secondly, I hope I can humor you a little with my perfectly written code :*
+
+
+------------- 10/10/2025: First Update -------------
+
+Hey, hey~,
+I thought I might add like an Update/Story, thing, to this whole Project.
+Documenting a little and talking about life, relations to the project bla bla.
+
+To start with, I want to recognize that over the summer vacation I absolutely forgot about this.
+I neglected the project and was too lazy to pick it up again.
+I could've done so much in that time, but oh well.
+But I'm back! And so is my motivation.  I'm back in school, and currently learning JS.
+Learning JS, having fun with the script, I got motivated again, and now, I'm back.
+More ready than ever. Better than ever. Because I'm actively learning a new language to help this project.
+
+To continue my litte writing explosion for now, I wanted to say that
+the project is technically live on the web. I've hosted it via Cloudflare basically since day one.
+And now my little domain is running out, which is fine.
+The domain name is "kiraminecraft.org", as you might guess, I didn't intend to use it for something like this.
+I'm letting it run out, and I'm getting a new one. This will happen sometime next year in May.
+So, my goal for now is to get the website into a half finished, usable, website,
+so I can host it over a new domain, and officially, announce the website to the public.
+
+I'd probably want to do this over the reddit, r/gamersupps, maybe it'll gain some traction then.
+And I'd gladly hope for some input and feedback from the community this is for.
+
+So for any of you, who might read this before May 2026, or the new domain-name,
+here is the passcode :) GGA8340853arikorp , just type this into the little box and be ready to be horrified haha.
