@@ -221,13 +221,12 @@
             startX = e.touches[0].pageX - scroller.offsetLeft;
             scrollLeft = scroller.scrollLeft;
             // don't set isDown to true; native touch scrolling is fine, but this allows JS touchmove control if desired
-        }, {passive: true});
+        }, {passive: false});
 
         scroller.addEventListener('touchmove', (e) => {
-            // optionally allow JS-based touch dragging by uncommenting below and change passive to false on touchstart
-            // const x = e.touches[0].pageX - scroller.offsetLeft;
-            // const walk = (x - startX);
-            // scroller.scrollLeft = scrollLeft - walk;
+            const x = e.touches[0].pageX - scroller.offsetLeft;
+            const walk = (x - startX);
+            scroller.scrollLeft = scrollLeft - walk;
         }, {passive: true});
 
         /* Keyboard accessibility: arrow keys, PageLeft/PageRight, Home/End */
