@@ -32,13 +32,66 @@
 </header>
 
 <nav>
-    <a id="Home_Nav" title="Go back to the Home-page" href="real_index.html"><img id="HomeImg_Nav" alt="Archive Logo" src="Images/LogoSmall.ico" width="32px"></a>
-    <a class="Underline_Animation" id="WaifuCups_Nav" title="Go to the Waifu Cups page" href="Cups/Cups_Main.html">Cups</a>
-    <a class="Underline_Animation" id="Consumables_Nav" title="Go to the Consumables page" href="Consumables/Consumables_Main.html">Cons</a>
-    <a class="Underline_Animation" id="Merch_Nav" title="Go to the Merch page" href="GG_Merch/GG_Merch_Main.html">Merch</a>
-    <a class="Underline_Animation" id="VCards_Nav" title="Go to the Vcards page" href="VCards/VCards_Main.html">Vcards</a>
-    <a class="Underline_Animation" id="Partners_Nav" title="Go to the Partners page" href="GG_Partners/GG_Partners_Main.html">Partners</a>
-    <p id="Search_Nav" title="Search for specific categories or items">Search</p>
+    <a id="Home_Nav" title="Go back to the Home-page" href="real_index.html"><img id="HomeImg_Nav" alt="Archive Logo" src="Images/LogoSmall.ico" width="32px">
+
+    </a>
+    <a class="Underline_Animation" id="WaifuCups_Nav" title="Go to the Waifu Cups page" href="Cups/Cups_Main.html">
+        Cups
+    </a>
+
+    <ul id="Consumables_Nav" title="Go to the Consumables page">
+        <li id="dropdownCons">
+            <a class="Underline_Animation" id="dropdownBTN" href="Consumables/Consumables_Main.html">Cons.</a>
+            <ul id="dropdownContentCons">
+                <li>
+                    <a href="Consumables/Tubs/Tubs_Main.html">
+                        Tubs
+                    </a>
+                </li>
+                <li>
+                    <a href="Consumables/AFK/AFK_Main.html">
+                        Afk
+                    </a>
+                </li>
+                <li>
+                    <a href="Consumables/Snacks/Snacks_Main.html">
+                        Snacks
+                    </a>
+                </li>
+                <li>
+                    <a href="Consumables/Tea/Tea_Main.html">
+                        Tea
+                    </a>
+                </li>
+                <li>
+                    <a href="Consumables/Cans/Cans_Main.html">
+                        Cans
+                    </a>
+                </li>
+                <li>
+                    <a href="Consumables/Ramen/Ramen_Main.html">
+                        Ramen
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <a class="Underline_Animation" id="Merch_Nav" title="Go to the Merch page" href="GG_Merch/GG_Merch_Main.html">
+        Merch
+    </a>
+
+    <a class="Underline_Animation" id="VCards_Nav" title="Go to the Vcards page" href="VCards/VCards_Main.html">
+        Vcards
+    </a>
+
+    <a class="Underline_Animation" id="Partners_Nav" title="Go to the Partners page" href="GG_Partners/GG_Partners_Main.html">
+        Partners
+    </a>
+
+    <p id="Search_Nav" title="Search for specific categories or items">
+        Search
+    </p>
 </nav>
 
 <div style="font-family: Montserrat, sans-serif; font-optical-sizing: auto; font-weight: 900; font-style: normal;" id="main_title">
@@ -124,7 +177,7 @@
 
 
     <div id="write_mail_form">
-        <h2>Send us something!</h2>
+        <h2>Send us a mail!</h2>
         <button title="Click to mail us!" class="newsletter-form" type="submit" onclick="window.location.href='mailto:kira@kiraminecraft.org'">Send us a mail!</button>
     </div>
     <div id="news_letter_signup">
@@ -135,14 +188,15 @@
         </form>
     </div>
     <div id="explanation_text">
-        <h2 style="text-align: center">What is this?</h2>
+        <h2 style="text-align: center">What is this Website about?</h2>
         <p>
 
-            This website is supposed to be an archive. Specifically, if you haven't noticed, for Gamersupps.
-            It's a fan-project, so nothing official. We ARE NOT Gamersupps, as so, we do NOT show any leaked content.
-            Anything ever made by Gamersupps, or anyone affiliated with them,
-            will be archived here. Why? Because WE love Gamersupps, and preserving it is important.
-            Many products go lost in time, or removed from the official website. That's why we decided, it's time to archive!
+            This website is supposed to be an archive for, specifically, if you haven't noticed, Gamersupps.
+            It's a fan-project, so nothing official. Anything ever made by Gamersupps, or anyone affiliated with them,
+            will be archived here. Why? Because WE love Gamersupps, and preserving their history is important to us.
+            (And because they aren't really doing anything themselves to preserve, well, nothing that's public).
+            Many products have been lost to time, and are removed from the official website.
+            That's why we've decided, it's time to archive! Because sometimes, you just want to know when and where!
 
         </p>
     </div>
@@ -152,10 +206,18 @@
 
     <div id="sleft">
         <p id="s1">Our Socials</p>
-        <a class="Social_Button" id="sA"></a>
-        <a class="Social_Button" id="sB"></a>
-        <a class="Social_Button" id="sC"></a>
-        <a class="Social_Button" id="sD"></a>
+        <a class="Social_Button" id="sA" href="https://github.com/KiraLovely/drinking-problems">
+            GitHub
+        </a>
+        <a class="Social_Button" id="sB" href="">
+            Instagram
+        </a>
+        <a class="Social_Button" id="sC" href="">
+            Twitter
+        </a>
+        <a class="Social_Button" id="sD" href="https://discord.gg/JT9TxBJNDr">
+            Discord
+        </a>
     </div>
 
 
@@ -178,10 +240,9 @@
     </div>
 </footer>
 
-<script>
-    (function () {
-        const scroller = document.getElementById('scroller');
+<script src=".Important/indexJSS.js">
 
+<<<<<<< Updated upstream
         /* Mouse drag to scroll */
         let isDown = false;
         let startX;
@@ -269,6 +330,8 @@
         }, { passive: false });
 
     })();
+=======
+>>>>>>> Stashed changes
 </script>
 
 </body>
