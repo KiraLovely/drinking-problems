@@ -10,12 +10,12 @@ to the oh so beloved Blo'Hole Blast.
 
 ------------- A bit about me and this projects idea -------------
 
-I'm not alone on this, currently, I have a friend who helps me.
+I'm not alone on this Project, currently, I have a friend who helps me.
 He's the guy who will make everything and anything art based.
 I'm on the other hand, am responsible for the code.
 
-That's why I also decided to learn how to use GitHub,
-Because I think I'll learn more if I'm closer to a community full of nerds :)
+That's why I also decided to learn how to navigate GitHub,
+Because I think I'll learn more if I'm closer to a community full of nerds :)\
 (And because learning code in school is fun and all.. but a bit slow)
 
 
@@ -32,7 +32,7 @@ thanks, firstly. And secondly, I hope I can humor you a little with my perfectly
 
 ------------- 10/10/2025: First Update -------------
 
-Hey, hey~,
+Hey, hey~,\
 I thought I might add like an Update/Story, thing, to this whole Project.
 Documenting a little and talking about life, relations to the project bla bla.
 
@@ -56,3 +56,27 @@ And I'd gladly hope for some input and feedback from the community this is for.
 
 So for any of you, who might read this before May 2026, or the new domain-name,
 here is the passcode :) GGA8340853arikorp , just type this into the little box and be ready to be horrified haha.
+
+
+------------- 26/10/2025: Small talk -------------
+
+Hey, hey~\
+Here I am again, with a little update/ramble. So this is a day, after pull-request #15,
+I've just update the Navbar, and I'm unsure if I like the change or not. 
+
+For context, I changed the Consumables Button (Cons)
+from just being a button, to a dropdown menu. And, I don't know really. At first, I liked it,
+but now it feels a bit clunky. But maybe it's just me again. 
+I've also had a big problem with the old font we used, it bugged all the time, 
+and I couldn't really be happy about anything, when opening the site. 
+Maybe it'll be the same here, where I burn my head off for the next few weeks, 
+and eventually find a small tweak that'll satisfy me.\
+
+Anyway, I realised that GithHub, apparently only focuses on file extensions.
+So I moved the little JavaScript I have, into actual JS files. Yay. Now everybody can see how horrible it is!
+
+I've also had a little discussion with my friend, about the name of our website,
+and surprise surprise we've even come up with a name that we think fits.
+I'm not going to leak it for now, because we're still waiting for the old domain to run out,
+so until that happens, be patient :)
+
