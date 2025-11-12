@@ -198,15 +198,20 @@ footer h2, h1 {
 }
 #sA {
     grid-area: OurSa;
+    background-color: white;
 }
 #sB {
     grid-area: OurSb;
+    overflow: hidden;
 }
 #sC {
     grid-area: OurSc;
+    overflow: hidden;
 }
 #sD {
     grid-area: OurSd;
+    overflow: hidden;
+    background-color: rebeccapurple;
 }
 
 #sright {
