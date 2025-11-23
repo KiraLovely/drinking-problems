@@ -7,8 +7,8 @@
     <meta name="keywords" content="Gamersupps, GG, Waifu,Cups , Archive">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href=".Important/indexStyShe.css">
-    <link rel="stylesheet" href=".Important/universal.css">
+    <link rel="stylesheet" href="Important/indexStyShe.css">
+    <link rel="stylesheet" href="Important/universal.css">
     <link rel="icon" href="Images/LogoSmall.ico">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,9 +32,10 @@
 </header>
 
 <nav>
-    <a id="Home_Nav" title="Go back to the Home-page" href="real_index.html"><img id="HomeImg_Nav" alt="Archive Logo" src="Images/LogoSmall.ico" width="32px">
-
+    <a id="Home_Nav" title="Go back to the Home-page" href="real_index.html">
+        <img id="HomeImg_Nav" alt="Archive Logo" src="Images/LogoSmall.ico" width="40px">
     </a>
+
     <a class="Underline_Animation" id="WaifuCups_Nav" title="Go to the Waifu Cups page" href="Cups/Cups_Main.html">
         Cups
     </a>
@@ -90,7 +91,14 @@
     </a>
 
     <p id="Search_Nav" title="Search for specific categories or items">
-        Search
+        <input
+        type="text"
+        id="searchfield"
+        placeholder="Search archive.."
+        >
+        <button id="searchButton">
+            Search
+        </button>
     </p>
 </nav>
 
@@ -178,13 +186,20 @@
 
     <div id="write_mail_form">
         <h2>Send us a mail!</h2>
-        <button title="Click to mail us!" class="newsletter-form" type="submit" onclick="window.location.href='mailto:kira@kiraminecraft.org'">Send us a mail!</button>
+        <button
+              id="mailButton" title="Click to mail us!" class="newsletter-form" type="submit"
+              onclick="alert('Our E-mail is currently unavailable, if you have questions or anything else, please join our discord to let us know!')"
+        >
+            Send us a mail!
+        </button>
     </div>
     <div id="news_letter_signup">
         <h2>Subscribe to our Newsletter</h2>
-        <form class="newsletter-form">
-            <input type="email" placeholder="Enter your email" required />
-            <button type="submit">Subscribe</button>
+        <form id="newsletter_form">
+            <input id="newsletter_Input" type="email" placeholder="Enter your email">
+            <button id="newsletter_Button" type="submit">
+                Subscribe
+            </button>
         </form>
     </div>
     <div id="explanation_text">
@@ -240,8 +255,7 @@
     </div>
 </footer>
 
-<script src=".Important/indexJSS.js">
-</script>
-
+<script src="Important/indexJSS.js"></script>
+<script src="Important/universal.js"></script>
 </body>
 </html>

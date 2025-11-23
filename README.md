@@ -61,7 +61,7 @@ here is the passcode :) GGA8340853arikorp , just type this into the little box a
 ------------- 26/10/2025: Small talk -------------
 
 Hey, hey~\
-Here I am again, with a little update/ramble. So this is a day, after pull-request #15,
+Here I am again, with a little update/ramble. So this is, a day, after pull-request #15,
 I've just update the Navbar, and I'm unsure if I like the change or not. 
 
 For context, I changed the Consumables Button (Cons)
@@ -72,7 +72,7 @@ and I couldn't really be happy about anything, when opening the site.
 Maybe it'll be the same here, where I burn my head off for the next few weeks, 
 and eventually find a small tweak that'll satisfy me.\
 
-Anyway, I realised that GithHub, apparently only focuses on file extensions.
+Anyway, I realised that GitHub, apparently only focuses on file extensions.
 So I moved the little JavaScript I have, into actual JS files. Yay. Now everybody can see how horrible it is!
 
 I've also had a little discussion with my friend, about the name of our website,

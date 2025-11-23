@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Gurt</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const email = params.get("email");
+
+    document.getElementById("result").textContent = "Received: " + email;
+</script>
+</body>
+</html>
