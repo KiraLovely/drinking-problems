@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="Important/indexStyShe.css">
     <link rel="stylesheet" href="Important/universal.css">
     <link rel="icon" href="Images/LogoSmall.ico">
+    <link rel="stylesheet" href="test.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +21,8 @@
 <body>
 
 
-<header>
+<header class="hero">
+    <canvas id="canvas" width="500" height="500"></canvas>
     <div id="title">
         <img style="margin: 0;padding: 0; object-fit: contain"
              alt="Gamersupps Vault Logo" src="Images/gamersupps_vault_logo.png" width="85%">
@@ -90,7 +92,7 @@
         Partners
     </a>
 
-    <p id="Search_Nav" title="Search for specific categories or items">
+    <label id="Search_Nav" title="Search for specific categories or items">
         <input
         type="text"
         id="searchfield"
@@ -99,7 +101,7 @@
         <button id="searchButton">
             Search
         </button>
-    </p>
+    </label>
 </nav>
 
 <div style="font-family: Montserrat, sans-serif; font-optical-sizing: auto; font-weight: 900; font-style: normal;" id="main_title">
@@ -196,7 +198,9 @@
     <div id="news_letter_signup">
         <h2>Subscribe to our Newsletter</h2>
         <form id="newsletter_form">
+            <label title="Email Input Field for Newsletter Subscription">
             <input id="newsletter_Input" type="email" placeholder="Enter your email">
+            </label>
             <button id="newsletter_Button" type="submit">
                 Subscribe
             </button>
@@ -241,15 +245,15 @@
         <p id="s2">Gamersupps Socials</p>
 
         <a class="Social_Button" id="sgA" target="_blank" href="https://x.com/gamersupps">
-            <img src="Images/X_Logo.png" height="50px">
+            <img src="Images/X_Logo.png" alt="Gamersupps Twitter" height="50px">
         </a>
 
         <a class="Social_Button" id="sgB" target="_blank" href="https://www.instagram.com/gamersupps/">
-            <img src="Images/insta_logo.png" height="50px">
+            <img src="Images/insta_logo.png" alt="Gamersupps Instagram" height="50px">
         </a>
 
         <a class="Social_Button" id="sgC" target="_blank" href="https://www.tiktok.com/@gamersupps?source=h5_m">
-            <img src="Images/tiktok_logo.png" height="50px">
+            <img src="Images/tiktok_logo.png" alt="Gamersupps Tiktok" height="50px">
         </a>
 
     </div>
@@ -257,5 +261,6 @@
 
 <script src="Important/indexJSS.js"></script>
 <script src="Important/universal.js"></script>
+<script src="test_test.js"></script>
 </body>
 </html>
