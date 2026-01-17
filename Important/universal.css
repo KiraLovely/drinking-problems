@@ -17,7 +17,6 @@ nav {
     padding-top: 0.25vw;
     position:sticky;
     top:0;
-    border-radius: 0 0 5px 5px;
     z-index: 3;
 
     align-content: center;
