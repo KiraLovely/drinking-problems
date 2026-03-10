@@ -16,7 +16,6 @@
     .bg-image {
       position: absolute;
       width: 400px;
-      opacity: 0.2;
       pointer-events: none;
       animation: float 40s linear infinite;
     }
@@ -54,31 +53,7 @@
 
 <script src="test_test.js"></script>
 <script>
-  const images = [
-    "Images/test/bg1.png",
-    "Images/test/bg2.jpg",
-    "Images/test/bg3.jpg"
-  ];
 
-  const container = document.getElementById("bg-container");
-
-  // pick random image
-  const img = document.createElement("img");
-  img.src = images[Math.floor(Math.random() * images.length)];
-  img.className = "bg-image";
-
-  // random path values
-  const vw = window.innerWidth;
-  const vh = window.innerHeight;
-
-  img.style.setProperty("--x-start", `${Math.random() * vw}px`);
-  img.style.setProperty("--y-start", `${Math.random() * vh}px`);
-  img.style.setProperty("--x-end", `${Math.random() * vw}px`);
-  img.style.setProperty("--y-end", `${Math.random() * vh}px`);
-
-  img.style.animationDuration = `${30 + Math.random() * 40}s`;
-
-  container.appendChild(img);
 </script>
 
 </body>

@@ -32,7 +32,7 @@ thanks, firstly. And secondly, I hope I can humor you a little with my perfectly
 
 ------------- 10/10/2025: First Update -------------
 
-Hey, hey~,\
+Hey, hey~\
 I thought I might add like an Update/Story, thing, to this whole Project.
 Documenting a little and talking about life, relations to the project bla bla.
 
@@ -80,3 +80,19 @@ and surprise surprise we've even come up with a name that we think fits.
 I'm not going to leak it for now, because we're still waiting for the old domain to run out,
 so until that happens, be patient :)
 
+
+------------- 17/01/2026: Small talk -------------
+
+Hey, Hey~\
+2026 already, huh? Well what a year it was. Reflecting a bit on what I've done for the site,
+and what hasn't happened yet. I think I wouldn't say I'm much proud,
+but at least not as disappointing as the year before. Motivation is something I'm rather lacking.
+
+Anyways, seeing as the deadline for "trying to launch with new domain name" crawls closer and closer,
+I've gotta get it together a bit. And I think I'm getting there.. well, at least if I don't stop again.
+There's still a lot to do.
+
+I'll try and smash as much work into this as I can, throughout the next Vacations,
+as I will work the first time (Internship for like 6 weeks) and there are a lot of other things going on.
+
+There isn't much more to say, so until next time.

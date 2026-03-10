@@ -47,9 +47,9 @@
 
     scroller.addEventListener('touchmove', (e) => {
         // optionally allow JS-based touch dragging by uncommenting below and change passive to false on touchstart
-        // const x = e.touches[0].pageX - scroller.offsetLeft;
-        // const walk = (x - startX);
-        // scroller.scrollLeft = scrollLeft - walk;
+        const x = e.touches[0].pageX - scroller.offsetLeft;
+        const walk = (x - startX);
+        scroller.scrollLeft = scrollLeft - walk;
     }, {passive: true});
 
     /* Keyboard accessibility: arrow keys, PageLeft/PageRight, Home/End */
@@ -90,3 +90,39 @@
     }, { passive: false });
 
 })();
+
+
+// --------- Tiny moving image maker for landingpage background ---------
+
+
+const images = [
+    "Images/test/bg1.png",
+    "Images/test/bg2.jpg",
+    "Images/test/bg3.jpg",
+    "Images/test/bg4.png",
+    "Images/test/bg5.png",
+    "Images/test/bg6.png"
+];
+
+const container = document.getElementById("bg-container");
+const rect = container.getBoundingClientRect();
+const count = 45; // number of images
+
+for (let i = 0; i < count; i++) {
+    const img = document.createElement("img");
+    img.src = images[Math.floor(Math.random() * images.length)];
+    img.className = "bg-image";
+
+    img.style.setProperty("--x-start", `${Math.random() * rect.width}px`);
+    img.style.setProperty("--y-start", `${Math.random() * rect.height}px`);
+    img.style.setProperty("--x-end", `${Math.random() * rect.width}px`);
+    img.style.setProperty("--y-end", `${Math.random() * rect.height}px`);
+
+    const scale = 0.5 + Math.random() * 0.8;
+    img.style.transform = `scale(${scale})`;
+    img.style.animationDuration = `${40 + Math.random() * 60}s`;
+
+    img.style.animationDuration = `${30 + Math.random() * 40}s`;
+
+    container.appendChild(img);
+}

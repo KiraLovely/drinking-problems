@@ -1,5 +1,6 @@
 body {
     font-family: "JetBrains Mono Medium", sans-serif;
+    margin: 0;
 }
 body h1, h2 {
     font-family: "Montserrat", sans-serif;
@@ -56,16 +57,20 @@ nav {
     display: none;
     list-style: none;
     position: absolute;
-    z-index: -1;
-    top: 100%;
-    left: 16%;
+    z-index: 10;
+    top: 165%;
+    left: 0;
+    text-align: match-parent;
 }
+
+#dropdownContentCons.show {
+    display: block;
+    opacity: 1;
+}
+
 #dropdownContentCons li a {
     padding: 0.75rem 1rem;
     background-color: mediumpurple;
-}
-#dropdownCons:hover #dropdownContentCons {
-    display: block;
 }
 #Merch_Nav {
     grid-area: merch;
