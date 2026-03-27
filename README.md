@@ -27,7 +27,8 @@ My goal with this, is to become a somewhat decent coder,
 because I think it's fun, and I want to do this as a living in the future.
 
 ------------- Devlog - Blog -------------
+
 [📓 Devlog - Blog](./DEVLOG.md) – See the new Blog updates or the old ones that were previously here.
-------------- A bit about me and this projects idea -------------------------- A bit about me and this projects idea -------------
+
 If for whatever reason you decided to visit this weird project, and even read trough this,
 thanks, firstly. And secondly, I hope I can humor you a little with my perfectly written code :*
