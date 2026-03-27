@@ -3,11 +3,13 @@
 
 body {
     background-color: black;
+    overflow-x: hidden;
     color: white;
 
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: auto 47vw auto 35vw 1fr;
+    margin: 0 0 0 0;
+    grid-template-rows: auto 47vw 17vw 35vw 1fr;
     grid-template-areas:
             "navBar"
             "header"
@@ -21,6 +23,7 @@ body {
 
 header {
     background-color: #000000;
+    overflow: hidden;
     grid-area: header;
 
     align-content: center;
@@ -39,6 +42,68 @@ header {
     height: 25vw;
     margin: auto;
     padding: 1vw;
+}
+#canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+.hero {
+    height: 100vh;
+    min-height: 30em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.hero::before {
+    content: "";
+    background: hsla(
+            0,
+            0%,
+            41%,
+            0.25
+    );
+    backdrop-filter: blur(70px);
+    -webkit-backdrop-filter: blur(70px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.hero div {
+    text-align: center;
+    z-index: 3;
+    color: white;
+}
+#bg-container {
+    position: absolute;
+    pointer-events: none;
+    inset: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+.bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    pointer-events: none;
+    animation: float 40s linear infinite;
+}
+
+@keyframes float {
+    from {
+        transform: translate(var(--x-start), var(--y-start));
+    }
+    to {
+        transform: translate(var(--x-end), var(--y-end));
+    }
 }
 
 
@@ -68,7 +133,6 @@ main {
     grid-auto-flow: column;
     grid-auto-columns: 19%;
     column-gap: 3vw;
-    padding: 1vw;
 
     overflow-x: auto;
     overflow-y: hidden;

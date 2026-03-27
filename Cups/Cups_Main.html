@@ -20,17 +20,6 @@
 <body>
 
 
-<nav>
-  <a id="Home_Nav" title="Go back to the Home-page" href="../real_index.html"><img id="HomeImg_Nav" alt="Archive Logo" src="../Images/LogoSmall.ico" width="32px"></a>
-  <a class="Underline_Animation" id="WaifuCups_Nav" title="Go to the Waifu Cups page" href="../Cups/Cups_Main.html">cups</a>
-  <a class="Underline_Animation" id="Consumables_Nav" title="Go to the Consumables page" href="../Consumables/Consumables_Main.html">cons</a>
-  <a class="Underline_Animation" id="Merch_Nav" title="Go to the Merch page" href="../GG_Merch/GG_Merch_Main.html">merch</a>
-  <a class="Underline_Animation" id="VCards_Nav" title="Go to the Vcards page" href="../VCards/VCards_Main.html">vcards</a>
-  <a class="Underline_Animation" id="Partners_Nav" title="Go to the Partners page" href="../GG_Partners/GG_Partners_Main.html">partners</a>
-  <p id="Search_Nav" title="Search for specific categories or items">search</p>
-</nav>
-
-
 <header>
   <img class="selection_banner" alt="Cups and co. banner" src="../Images/waifuCups.jpg" height="90%">
   <img class="selection_banner" alt="Cups and co. banner" src="../Images/waifuJugs.jpg" height="90%">
@@ -38,6 +27,76 @@
   <img class="selection_banner" alt="Cups and co. banner" src="../Images/pixelCups.jpg" height="90%">
 </header>
 
+<nav>
+  <a id="Home_Nav" title="Go back to the Home-page" href="../real_index.html">
+    <img id="HomeImg_Nav" alt="Archive Logo" src="../Images/LogoSmall.ico" width="40px">
+  </a>
+
+  <a class="Underline_Animation" id="WaifuCups_Nav" title="Go to the Waifu Cups page" href="../Cups/Cups_Main.html">
+    Cups
+  </a>
+
+  <ul id="Consumables_Nav" title="Go to the Consumables page">
+    <li id="dropdownCons">
+      <a class="Underline_Animation" id="dropdownBTN" href="../Consumables/Consumables_Main.html">Cons.</a>
+      <ul id="dropdownContentCons">
+        <li>
+          <a href="../Consumables/Tubs/Tubs_Main.html">
+            Tubs
+          </a>
+        </li>
+        <li>
+          <a href="../Consumables/AFK/AFK_Main.html">
+            Afk
+          </a>
+        </li>
+        <li>
+          <a href="../Consumables/Snacks/Snacks_Main.html">
+            Snacks
+          </a>
+        </li>
+        <li>
+          <a href="../Consumables/Tea/Tea_Main.html">
+            Tea
+          </a>
+        </li>
+        <li>
+          <a href="../Consumables/Cans/Cans_Main.html">
+            Cans
+          </a>
+        </li>
+        <li>
+          <a href="../Consumables/Ramen/Ramen_Main.html">
+            Ramen
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <a class="Underline_Animation" id="Merch_Nav" title="Go to the Merch page" href="../GG_Merch/GG_Merch_Main.html">
+    Merch
+  </a>
+
+  <a class="Underline_Animation" id="VCards_Nav" title="Go to the Vcards page" href="../VCards/VCards_Main.html">
+    Vcards
+  </a>
+
+  <a class="Underline_Animation" id="Partners_Nav" title="Go to the Partners page" href="../GG_Partners/GG_Partners_Main.html">
+    Partners
+  </a>
+
+  <label id="Search_Nav" title="Search for specific categories or items">
+    <input
+          type="text"
+          id="searchfield"
+          placeholder="Search archive.."
+    >
+    <button id="searchButton">
+      Search
+    </button>
+  </label>
+</nav>
 
 <main>
   <div id="sorting_mechanism">
@@ -61,24 +120,36 @@
 
 
   <div id="write_mail_form">
-    <h2>Send us something!</h2>
-    <button title="Click to mail us!" class="newsletter-form" type="submit" onclick="window.location.href='mailto:kira@kiraminecraft.org'">Send us a mail!</button>
+    <h2>Send us a mail!</h2>
+    <button
+          id="mailButton" title="Click to mail us!" class="newsletter-form" type="submit"
+          onclick="alert('Our E-mail is currently unavailable, if you have questions or anything else, please join our discord to let us know!')"
+    >
+      Send us a mail!
+    </button>
   </div>
   <div id="news_letter_signup">
     <h2>Subscribe to our Newsletter</h2>
-    <form class="newsletter-form">
-      <input type="email" placeholder="Enter your email" required />
-      <button type="submit">Subscribe</button>
+    <form id="newsletter_form">
+      <label title="Email Input Field for Newsletter Subscription">
+        <input id="newsletter_Input" type="email" placeholder="Enter your email">
+      </label>
+      <button id="newsletter_Button" type="submit">
+        Subscribe
+      </button>
     </form>
   </div>
   <div id="explanation_text">
-    <h2 style="font-family: sans-serif, 'Inter Semi Bold'; text-align: center">What is this?</h2>
+    <h2 style="text-align: center">What is this Website about?</h2>
     <p>
-      This website is supposed to be an archive. Specifically, if you haven't noticed, for Gamersupps.
-      It's a fan-project, so nothing official. We ARE NOT Gamersupps, as so, we do NOT show any leaked content.
-      Anything ever made by Gamersupps, or anyone affiliated with them,
-      will be archived here. Why? Because WE love Gamersupps, and preserving it is important.
-      Many products go lost in time, or removed from the official website. That's why we decided, it's time to archive!
+
+      This website is supposed to be an archive for, specifically, if you haven't noticed, Gamersupps.
+      It's a fan-project, so nothing official. Anything ever made by Gamersupps, or anyone affiliated with them,
+      will be archived here. Why? Because WE love Gamersupps, and preserving their history is important to us.
+      (And because they aren't really doing anything themselves to preserve, well, nothing that's public).
+      Many products have been lost to time, and are removed from the official website.
+      That's why we've decided, it's time to archive! Because sometimes, you just want to know when and where!
+
     </p>
   </div>
   <div id="archive_partners">
@@ -87,10 +158,18 @@
 
   <div id="sleft">
     <p id="s1">Our Socials</p>
-    <a class="Social_Button" id="sA"></a>
-    <a class="Social_Button" id="sB"></a>
-    <a class="Social_Button" id="sC"></a>
-    <a class="Social_Button" id="sD"></a>
+    <a class="Social_Button" id="sA" target="_blank" href="https://github.com/KiraLovely/drinking-problems">
+      <img alt="Github Logo" src="../Images/github-icon-1.png" height="50px">
+    </a>
+    <a class="Social_Button" id="sB" target="_blank" href="">
+      <img alt="Instagram Logo" src="../Images/insta_logo.png" height="50px">
+    </a>
+    <a class="Social_Button" id="sC" target="_blank" href="">
+      <img alt="Twitter Logo" src="../Images/X_Logo.png" height="50px">
+    </a>
+    <a class="Social_Button" id="sD" target="_blank" href="">
+      <img alt="Discord Logo" src="../Images/discord-6.png" height="35px">
+    </a>
   </div>
 
 
@@ -99,15 +178,15 @@
     <p id="s2">Gamersupps Socials</p>
 
     <a class="Social_Button" id="sgA" target="_blank" href="https://x.com/gamersupps">
-      <img src="../Images/X_Logo.png" height="50px">
+      <img src="../Images/X_Logo.png" alt="Gamersupps Twitter" height="50px">
     </a>
 
     <a class="Social_Button" id="sgB" target="_blank" href="https://www.instagram.com/gamersupps/">
-      <img src="../Images/insta_logo.png" height="50px">
+      <img src="../Images/insta_logo.png" alt="Gamersupps Instagram" height="50px">
     </a>
 
     <a class="Social_Button" id="sgC" target="_blank" href="https://www.tiktok.com/@gamersupps?source=h5_m">
-      <img src="../Images/tiktok_logo.png" height="50px">
+      <img src="../Images/tiktok_logo.png" alt="Gamersupps Tiktok" height="50px">
     </a>
 
   </div>

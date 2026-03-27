@@ -3,6 +3,7 @@
 <head>
    <meta charset="UTF-8">
    <title>Gurt</title>
+   <link rel="stylesheet" href="../universal.css">
 </head>
 <body>
 <p id="result"></p>
@@ -10,7 +11,11 @@
     const params = new URLSearchParams(window.location.search);
     const email = params.get("email");
 
-    document.getElementById("result").textContent = "Received: " + email;
+    document.getElementById("result").textContent =
+        "Our Newsletter is still under construction, and our Email System might not be up yet! " +
+        "Make sure to try and resubmit your email (" + email + ") on a later date! " +
+        "If you have any questions, please refer to our community discord. " +
+        "We will try to respond as quickly as possible";
 </script>
 </body>
 </html>
