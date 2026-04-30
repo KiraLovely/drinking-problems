@@ -6,17 +6,22 @@ body {
 
     display: grid;
     row-gap: 1vw;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: auto 15vw auto 1fr;
+    column-gap: 0;
+    grid-template-columns: 2fr 4fr 4fr;
+    grid-template-rows: auto auto auto 1fr;
     grid-template-areas:
-            "navBar navBar"
-            "banner header"
-            "banner main"
-            "footer footer";
+            "navBar navBar navBar"
+            "banner header header"
+            "main main main"
+            "footer footer footer";
 }
 
 header {
     grid-area: header;
+}
+
+#Banner {
+    grid-area: banner;
 }
 
 main {
@@ -25,24 +30,37 @@ main {
 
     display: grid;
     grid-template-rows: auto auto;
-    grid-template-areas: "sorting_buttons" "plastic_area";
+    grid-template-areas:
+            "sorting_buttons"
+            "plastic_area";
 }
 
 #sorting_mechanism {
     grid-area: sorting_buttons;
-}
-#plastic_container {
-    grid-area: plastic_area;
-}
-
-
-/*Banners*/
-#Banner {
-    grid-area: banner;
-    align-self: center;
     text-align: center;
 }
 
-.selection_banner {
-    margin-right: 1vw;
+#plastic_container {
+    background-color: #343a40;
+    grid-area: plastic_area;
+
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/*Card Design*/
+.cup-card {
+    border: 2px solid #5a189a;
+    color: white;
+    border-radius: 8px;
+    padding: 1em;
+    margin-bottom: 1em;
+    max-width: 300px;
+    background-color: #343a40;
+}
+.cup-preview {
+    width: 100%;
 }

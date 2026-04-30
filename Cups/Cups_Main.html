@@ -21,10 +21,10 @@
 
 
 <header>
-  <img class="selection_banner" alt="Cups and co. banner" src="../Images/waifuCups.jpg" height="90%">
-  <img class="selection_banner" alt="Cups and co. banner" src="../Images/waifuJugs.jpg" height="90%">
-  <img class="selection_banner" alt="Cups and co. banner" src="../Images/metalCups.jpg" height="90%">
-  <img class="selection_banner" alt="Cups and co. banner" src="../Images/pixelCups.jpg" height="90%">
+  <button><a href="WaifuCups/WaifuCups_Main.html">Test_1</a></button>
+  <button><a href="WaifuJugs/WaifuJugs_Main.html">Test_2</a></button>
+  <button><a href="MetalCups/MetalCups_Main.html">Test_3</a></button>
+  <button><a href="PixelCups/PixelCups_Main.html">Test_4</a></button>
 </header>
 
 <nav>
@@ -98,19 +98,31 @@
   </label>
 </nav>
 
+
 <main>
+
   <div id="sorting_mechanism">
-    <p>Sort By</p>
+    <p>Sort Cups from:</p><br>
+
+    <button onclick="filterCupsAZ()" id="SortAZ">A to Z</button>
+    <button onclick="" id="SortZA">Z to A</button>
+    <button onclick="" id="SortNO">Newest to Oldest</button>
+    <button onclick="" id="SortON">Oldest to Newest</button>
+    <button onclick="" id="SortCol">Collab.</button>
+    <button onclick="" id="SortNCol">Non-Collab.</button>
+    <label alt="Press Enter to apply Search" for="SortSpf">
+      <button>
+        Search:<input id="SortSpf">
+      </button>
+    </label>
   </div>
 
-  <div id="plastic_container">
-    <p>Gurt: Yo!</p>
-  </div>
+  <div id="plastic_container"></div>
 </main>
 
 
 <div id="Banner">
-  <img alt="Cups and co. banner" src="../Images/waifuCups.jpg">
+  <img alt="Cups and co. banner" src="../Images/waifuCups.jpg" height="302px">
 </div>
 
 
@@ -191,6 +203,10 @@
 
   </div>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script src="cupsMain.js"></script>
+<script src="../Important/universal.js"></script>
 
 </body>
 </html>

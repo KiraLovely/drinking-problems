@@ -21,12 +21,13 @@ async function loadPartners() {
         card.classList.add('partner-card');
 
         card.innerHTML = `
-            <img src="${partner.avatar}" class="partner-avatar" alt="${partner.name}">
-            <h3>${partner.funnyNumber}</h3>
-            <p><strong>Status:</strong> ${partner.title}</p>
+            <img src="${partner.creator_avatar}" class="partner-avatar" alt="${partner.creator_name}">
+            <h3>${partner.creator_name}</h3>
+            <p><strong>Title:</strong> ${partner.partner_title}</p>
             <p><strong>First appearance:</strong> ${partner.first_appearance}</p>
+            <p><strong>Code:</strong>${partner.creator_code}</p>
             <p><strong>Twitter:</strong> 
-                <a href="${partner.id}" target="_blank">${partner.id}</a>
+                <a href="${partner.creator_twitter}" target="_blank">${partner.twitter}</a>
             </p>
         `;
 
