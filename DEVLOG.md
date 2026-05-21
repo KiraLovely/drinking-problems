@@ -87,3 +87,17 @@ I've had some downs, because of slow progress, but the database made me really h
 I really do hope future me doesn't mess up, and that I can hold my word on releasing a pre-release version for you soon.
 
 That was all for now. Stay patient.
+
+
+------------- 23/03/2026: Another Update from me -------------
+
+Hey, Hey~\
+I have officially, accuired the new domain! Yippie!
+But I'll probably miss the deadline that had set-myself, for when the old domain runs out.\
+Eh.. but I can live with that. Though I don't want to hold it back too long again, I really do want this to go live, as soon as possible.
+
+Due to a lot of stress in school, and a lot of exams due in the next weeks, I'm a bit limited to how much work I can put into this project.
+
+But progress is there. I've been working on the Database, reworking some tables, and creating new one we needed.
+
+I'll also be present at TwitchCon EU this year, hehe. (Yes I'm just flexing on y'all).
