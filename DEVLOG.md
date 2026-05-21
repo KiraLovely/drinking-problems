@@ -89,7 +89,7 @@ I really do hope future me doesn't mess up, and that I can hold my word on relea
 That was all for now. Stay patient.
 
 
-------------- 23/03/2026: Another Update from me -------------
+------------- 21/05/2026: Another Update from me -------------
 
 Hey, Hey~\
 I have officially, accuired the new domain! Yippie!
