@@ -21,11 +21,28 @@
 
 
 <header>
-  <img class="selection_banner" alt="Cups and co. banner" src="../Images/waifuCups.jpg" height="90%">
-  <img class="selection_banner" alt="Cups and co. banner" src="../Images/waifuJugs.jpg" height="90%">
-  <img class="selection_banner" alt="Cups and co. banner" src="../Images/metalCups.jpg" height="90%">
-  <img class="selection_banner" alt="Cups and co. banner" src="../Images/pixelCups.jpg" height="90%">
+  <button class="cupSiteChangeButton">
+    <a href="WaifuCups/WaifuCups_Main.html" title="Click to go to Waifu Cups Page">
+      <img height="302px" alt="test" src="../Images/waifuCups.jpg" class="cupSiteChangeButtonImg">
+    </a>
+  </button>
+  <button class="cupSiteChangeButton">
+    <a href="WaifuJugs/WaifuJugs_Main.html" title="Click to go to Waifu Jugs Page">
+      <img height="302px" alt="test" src="../Images/waifuJugs.jpg" class="cupSiteChangeButtonImg">
+    </a>
+  </button>
+  <button class="cupSiteChangeButton">
+    <a href="MetalCups/MetalCups_Main.html" title="Click to go to Metal Cups Page">
+      <img height="302px" alt="test" src="../Images/metalCups.jpg" class="cupSiteChangeButtonImg">
+    </a>
+  </button>
+  <button class="cupSiteChangeButton">
+    <a href="PixelCups/PixelCups_Main.html" title="Click to go to Pixel Cups Page">
+      <img height="302px" alt="test" src="../Images/pixelCups.jpg" class="cupSiteChangeButtonImg">
+    </a>
+  </button>
 </header>
+
 
 <nav>
   <a id="Home_Nav" title="Go back to the Home-page" href="../real_index.html">
@@ -98,19 +115,36 @@
   </label>
 </nav>
 
+
 <main>
+
   <div id="sorting_mechanism">
-    <p>Sort By</p>
+    <p>Sort Cups from</p><br>
+
+    <button id="SortAZ">A to Z</button>
+    <button id="SortZA">Z to A</button>
+    <button id="SortNO">Newest to Oldest</button>
+    <button id="SortON">Oldest to Newest</button>
+    <button id="SortCol">Collab.</button>
+    <button id="SortNCol">Non-Collab.</button>
+    <button id="SortMaP">Plastic</button>
+    <button id="SortMaM">Metal</button>
+    <button id="ResetFilters">Reset</button>
+
+    <label for="SortSpf">
+      <button>
+        Search:
+          <input placeholder="Cup name" id="SortSpf">
+      </button>
+    </label>
   </div>
 
-  <div id="plastic_container">
-    <p>Gurt: Yo!</p>
-  </div>
+  <div id="plastic_container"></div>
 </main>
 
 
 <div id="Banner">
-  <img alt="Cups and co. banner" src="../Images/waifuCups.jpg">
+  <img alt="Cups and co. banner" src="../Images/waifuCups.jpg" height="302px">
 </div>
 
 
@@ -191,6 +225,10 @@
 
   </div>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script src="cupsMain.js"></script>
+<script src="../Important/universal.js"></script>
 
 </body>
 </html>

@@ -9,7 +9,7 @@ body {
     grid-template-areas:
             "navBar navBar"
             "banner header"
-            "banner main"
+            "main main"
             "footer footer";
 }
 
@@ -40,15 +40,12 @@ header {
     max-width: 300px;
     background-color: #343a40;
 }
-.partner-avatar {
-    width: 100px;
-    border-radius: 50%;
-    background-color: greenyellow;
+.waifucup-preview {
+    width: 100%;
 }
 
 #banner {
     background-image: linear-gradient(black, black, #252525);
     grid-area: banner;
-    align-content: center;
     text-align: center;
 }

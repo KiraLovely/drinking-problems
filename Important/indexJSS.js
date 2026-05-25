@@ -94,7 +94,6 @@
 
 // --------- Tiny moving image maker for landingpage background ---------
 
-
 const images = [
     "Images/test/bg1.png",
     "Images/test/bg2.jpg",
