@@ -21,11 +21,28 @@
 
 
 <header>
-  <button><a href="WaifuCups/WaifuCups_Main.html">Test_1</a></button>
-  <button><a href="WaifuJugs/WaifuJugs_Main.html">Test_2</a></button>
-  <button><a href="MetalCups/MetalCups_Main.html">Test_3</a></button>
-  <button><a href="PixelCups/PixelCups_Main.html">Test_4</a></button>
+  <button class="cupSiteChangeButton">
+    <a href="WaifuCups/WaifuCups_Main.html" title="Click to go to Waifu Cups Page">
+      <img height="302px" alt="test" src="../Images/waifuCups.jpg" class="cupSiteChangeButtonImg">
+    </a>
+  </button>
+  <button class="cupSiteChangeButton">
+    <a href="WaifuJugs/WaifuJugs_Main.html" title="Click to go to Waifu Jugs Page">
+      <img height="302px" alt="test" src="../Images/waifuJugs.jpg" class="cupSiteChangeButtonImg">
+    </a>
+  </button>
+  <button class="cupSiteChangeButton">
+    <a href="MetalCups/MetalCups_Main.html" title="Click to go to Metal Cups Page">
+      <img height="302px" alt="test" src="../Images/metalCups.jpg" class="cupSiteChangeButtonImg">
+    </a>
+  </button>
+  <button class="cupSiteChangeButton">
+    <a href="PixelCups/PixelCups_Main.html" title="Click to go to Pixel Cups Page">
+      <img height="302px" alt="test" src="../Images/pixelCups.jpg" class="cupSiteChangeButtonImg">
+    </a>
+  </button>
 </header>
+
 
 <nav>
   <a id="Home_Nav" title="Go back to the Home-page" href="../real_index.html">
@@ -102,17 +119,22 @@
 <main>
 
   <div id="sorting_mechanism">
-    <p>Sort Cups from:</p><br>
+    <p>Sort Cups from</p><br>
 
-    <button onclick="filterCupsAZ()" id="SortAZ">A to Z</button>
-    <button onclick="" id="SortZA">Z to A</button>
-    <button onclick="" id="SortNO">Newest to Oldest</button>
-    <button onclick="" id="SortON">Oldest to Newest</button>
-    <button onclick="" id="SortCol">Collab.</button>
-    <button onclick="" id="SortNCol">Non-Collab.</button>
-    <label alt="Press Enter to apply Search" for="SortSpf">
+    <button id="SortAZ">A to Z</button>
+    <button id="SortZA">Z to A</button>
+    <button id="SortNO">Newest to Oldest</button>
+    <button id="SortON">Oldest to Newest</button>
+    <button id="SortCol">Collab.</button>
+    <button id="SortNCol">Non-Collab.</button>
+    <button id="SortMaP">Plastic</button>
+    <button id="SortMaM">Metal</button>
+    <button id="ResetFilters">Reset</button>
+
+    <label for="SortSpf">
       <button>
-        Search:<input id="SortSpf">
+        Search:
+          <input placeholder="Cup name" id="SortSpf">
       </button>
     </label>
   </div>

@@ -35,6 +35,14 @@ main {
             "plastic_area";
 }
 
+.cupSiteChangeButton{
+    background-color: black;
+    border: 0 solid black
+}
+.cupSiteChangeButtonImg:hover{
+    opacity: 80%;
+}
+
 #sorting_mechanism {
     grid-area: sorting_buttons;
     text-align: center;
