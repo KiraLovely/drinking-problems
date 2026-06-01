@@ -33,7 +33,7 @@ function renderCups(cups) {
         card.classList.add('cup-card');
 
         card.innerHTML = `
-      <img src="${cup.cup_preview_image}" class="cup-preview" alt="${cup.cup_name}">
+      <img src="${cup.cup_preview_image}" height="250vw" class="cup-preview" alt="${cup.cup_name}">
       <h4>${cup.cup_name}</h4>
       <p>Creator: ${cup.partner_name ?? 'N/A'}</p>
       <p>Artist: ${cup.artist_name ?? 'Unknown'}</p>
