@@ -84,6 +84,12 @@ function applyFiltersAndSorting() {
         );
     }
 
+    if (filters.cup_type) {
+        result = result.filter(c =>
+            c.cup_type === filters.cup_type
+        );
+    }
+
 
     if (filters.collab !== null) {
         result = result.filter(c =>
@@ -168,6 +174,21 @@ function bindButtons() {
         applyFiltersAndSorting();
     });
 
+    document.getElementById('SortTyC').addEventListener('click', ()       => {
+        filters.cup_type = 'cup';
+        applyFiltersAndSorting();
+    });
+
+    document.getElementById('SortTyJ').addEventListener('click', ()       => {
+        filters.cup_type = 'jug';
+        applyFiltersAndSorting();
+    });
+
+    document.getElementById('SortTyPx').addEventListener('click', ()       => {
+        filters.cup_type = 'pixel';
+        applyFiltersAndSorting();
+    });
+
 
 
         document.getElementById('SortSpf').addEventListener('input', (e) => {
@@ -178,6 +199,7 @@ function bindButtons() {
 
     document.getElementById('ResetFilters').addEventListener('click', () => {
         filters.material = null;
+        filters.cup_type = null;
         filters.search = '';
         filters.collab = null;
         sortMode = null;

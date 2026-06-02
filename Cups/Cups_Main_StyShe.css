@@ -39,7 +39,7 @@ header {
 
 main {
     grid-area: main;
-    background-color: #343a40;
+    background-color: #212529;
 
     display: grid;
     grid-template-rows: auto auto;
@@ -62,7 +62,7 @@ main {
 }
 
 #plastic_container {
-    background-color: #343a40;
+    background-color: #212529;
     grid-area: plastic_area;
 
 
