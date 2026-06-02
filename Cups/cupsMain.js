@@ -51,6 +51,23 @@ const filters = {
 
 let sortMode = null;
 
+function normalizeCupName(name) {
+    if (!name) return '';
+
+    return name
+        .replace(/^waifu\s*cups?\s*x\s*/i, '')
+        .replace(/^waifu\s*cups?:\s*/i, '')
+        .replace(/^creator\s*cups?\s*x\s*/i, '')
+        .replace(/^creator\s*cups?:\s*/i, '')
+        .replace(/^waifu\s*jugs?\s*x\s*/i, '')
+        .replace(/^waifu\s*jugs?:\s*/i, '')
+        .replace(/^creator\s*jugs?\s*x\s*/i, '')
+        .replace(/^creator\s*jugs?:\s*/i, '')
+        .replace(/^pixel\s*cups?\s*x\s*/i, '')
+        .replace(/^pixel\s*cups?:\s*/i, '')
+        .trim();
+}
+
 function applyFiltersAndSorting() {
     if (!ALL_CUPS.length) {
         console.warn('applyFiltersAndSorting called before data loaded');
@@ -81,11 +98,17 @@ function applyFiltersAndSorting() {
     }
 
     if (sortMode === 'AZ') {
-        result.sort((a, b) => a.cup_name.localeCompare(b.cup_name));
+        result.sort((a, b) =>
+            normalizeCupName(a.cup_name)
+                .localeCompare(normalizeCupName(b.cup_name))
+        );
     }
 
     if (sortMode === 'ZA') {
-        result.sort((a, b) => b.cup_name.localeCompare(a.cup_name));
+        result.sort((a, b) =>
+            normalizeCupName(b.cup_name)
+                .localeCompare(normalizeCupName(a.cup_name))
+        );
     }
 
     if (sortMode === 'NEWEST') {
