@@ -101,3 +101,19 @@ Due to a lot of stress in school, and a lot of exams due in the next weeks, I'm 
 But progress is there. I've been working on the Database, reworking some tables, and creating new one we needed.
 
 I'll also be present at TwitchCon EU this year, hehe. (Yes I'm just flexing on y'all).
+
+
+------------- 03/06/2026: Strong workflow and new motivation -------------
+
+Hey, Hey~\
+I've been working a lot on the site lately, also because my friend picked up the pencil again haha.\
+We've managed to somewhat finish the cup site completely (still some minor cosmetic changes needed), but the current workflow is amazing.
+
+With school also ending soon, and stress going down, and myself slowly pushing away from scouting, I've found a lot of time lately for the project :D\
+Currently writing this, I'm working on the merch page and already making concepts for the consumable pages.
+
+Also.. the new name! I think it's finally time I reveal what it is..
+
+Lore Leakage! Yes, silly, corny, and inspired by the hornyness of Gamersupps naming-scheme. A perfect fit imo.
+
+That was a lot I wanted to say, I hope I keep up the flow. See y'all!
