@@ -87,3 +87,33 @@ I've had some downs, because of slow progress, but the database made me really h
 I really do hope future me doesn't mess up, and that I can hold my word on releasing a pre-release version for you soon.
 
 That was all for now. Stay patient.
+
+
+------------- 21/05/2026: Another Update from me -------------
+
+Hey, Hey~\
+I have officially, accuired the new domain! Yippie!
+But I'll probably miss the deadline that had set-myself, for when the old domain runs out.\
+Eh.. but I can live with that. Though I don't want to hold it back too long again, I really do want this to go live, as soon as possible.
+
+Due to a lot of stress in school, and a lot of exams due in the next weeks, I'm a bit limited to how much work I can put into this project.
+
+But progress is there. I've been working on the Database, reworking some tables, and creating new one we needed.
+
+I'll also be present at TwitchCon EU this year, hehe. (Yes I'm just flexing on y'all).
+
+
+------------- 03/06/2026: Strong workflow and new motivation -------------
+
+Hey, Hey~\
+I've been working a lot on the site lately, also because my friend picked up the pencil again haha.\
+We've managed to somewhat finish the cup site completely (still some minor cosmetic changes needed), but the current workflow is amazing.
+
+With school also ending soon, and stress going down, and myself slowly pushing away from scouting, I've found a lot of time lately for the project :D\
+Currently writing this, I'm working on the merch page and already making concepts for the consumable pages.
+
+Also.. the new name! I think it's finally time I reveal what it is..
+
+Lore Leakage! Yes, silly, corny, and inspired by the hornyness of Gamersupps naming-scheme. A perfect fit imo.
+
+That was a lot I wanted to say, I hope I keep up the flow. See y'all!
