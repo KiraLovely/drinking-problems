@@ -3,3 +3,26 @@ body {
     color: white;
     text-align: center;
 }
+
+main{
+    display: grid;
+    grid-template-columns: 2fr 4fr 2fr;
+    grid-template-rows: auto 1fr auto 2fr;
+    grid-template-areas:
+            "nav nav nav"
+            "banner text banner"
+            "merchMain merchMain merchMain"
+            "footer footer footer"
+}
+nav{
+    grid-area: nav;
+}
+footer{
+    grid-area: footer;
+}
+#merchBase{
+    grid-area: merchMain;
+}
+.merchBannerImg{
+    grid-area: banner;
+}
