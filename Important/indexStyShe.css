@@ -34,12 +34,12 @@ header {
 #title {
     display: flex;
     flex-direction: column;
-    background-color: rebeccapurple;
+    overflow: hidden;
     align-content: center;
     align-items: center;
     text-align: center;
-    width: 25vw;
-    height: 25vw;
+    width: 67vw;
+    height: 35vw;
     margin: auto;
     padding: 1vw;
 }
