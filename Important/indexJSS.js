@@ -1,4 +1,7 @@
+const supabaseUrl = 'https://qxidlnuurcfuqcsvwryb.supabase.co';
+const supabaseKey = 'sb_publishable_5WbTkW9HL-1tvaEsg1-WRQ_InP2IoLa';
 
+const supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
 // --------- Smooth scroll for Banner bar, mouse drag and mobile support ---------
 
 (function () {
@@ -92,7 +95,32 @@
 })();
 
 
-// --------- Tiny moving image maker for landingpage background ---------
+// --------- Images pull DB ---------
+
+async function getImage(name) {
+    const { data, error } = await supabaseClient
+        .from('loreLeakageImages')
+        .select('image_url')
+        .eq('image_name', name)
+        .single();
+
+    if (error || !data) {
+        console.error('Image load failed:', name, error);
+        return null;
+    }
+
+    return data.image_url;
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+    const logo = await getImage('loreLeakageLogo');
+    const fallBack = await getImage('fallBack');
+
+    document.getElementById('mainLogo').src = logo || fallBack;
+});
+
+
+// --------- Tiny moving image maker for landing-page background ---------
 
 const images = [
     "Images/test/bg1.png",
