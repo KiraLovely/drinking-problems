@@ -1,14 +1,14 @@
 body {
     background-color: black;
     color: white;
-    text-align: center;
     display: grid;
-    grid-template-rows: auto 1fr auto 2fr;
+    grid-template-columns: 2fr 4fr 2fr;
+    grid-template-rows: auto 1fr auto 1fr;
     grid-template-areas:
-            "navBar"
-            "main"
-            "merchItems"
-            "footer"
+            "navBar navBar navBar"
+            "main main main"
+            "merchItems merchItems merchItems"
+            "footer footer footer"
 }
 
 main{
@@ -22,15 +22,9 @@ main{
     grid-area: text;
 }
 
-nav{
-    grid-area: navBar;
-}
-footer{
-    grid-area: footer;
-}
-
 #merchBase{
     grid-area: merchItems;
+    text-align: center;
 }
 
 .merchBannerImgLeft{
