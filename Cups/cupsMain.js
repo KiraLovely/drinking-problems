@@ -33,7 +33,7 @@ function renderCups(cups) {
         card.classList.add('cup-card');
 
         card.innerHTML = `
-      <img src="${cup.cup_preview_image}" height="250vw" class="cup-preview" alt="${cup.cup_name}">
+      <img src="${cup.cup_preview_image}" class="cup-preview" alt="${cup.cup_name}">
       <h4>${cup.cup_name}</h4>
       <p>Creator: ${cup.partner_name ?? 'N/A'}</p>
       <p>Artist: ${cup.artist_name ?? 'Unknown'}</p>
@@ -136,56 +136,103 @@ function applyFiltersAndSorting() {
 function bindButtons() {
     document.getElementById('SortAZ').addEventListener('click', () => {
         sortMode = 'AZ';
+
+        document.getElementById('SortAZ').style.backgroundColor = 'darkgray';
+        document.getElementById('SortZA').style.backgroundColor = '';
+
         applyFiltersAndSorting();
     });
 
     document.getElementById('SortZA').addEventListener('click', () => {
         sortMode = 'ZA';
+
+        document.getElementById('SortZA').style.backgroundColor = 'darkgray';
+        document.getElementById('SortAZ').style.backgroundColor = '';
+
         applyFiltersAndSorting();
     });
 
     document.getElementById('SortNO').addEventListener('click', () => {
         sortMode = 'NEWEST';
+
+        document.getElementById('SortNO').style.backgroundColor = 'darkgray';
+        document.getElementById('SortON').style.backgroundColor = '';
+
         applyFiltersAndSorting();
     });
 
     document.getElementById('SortON').addEventListener('click', () => {
         sortMode = 'OLDEST';
+
+        document.getElementById('SortON').style.backgroundColor = 'darkgray';
+        document.getElementById('SortNO').style.backgroundColor = '';
+
         applyFiltersAndSorting();
     });
 
     document.getElementById('SortCol').addEventListener('click', () => {
         filters.collab = true;
+
+        document.getElementById('SortCol').style.backgroundColor = 'darkgray';
+        document.getElementById('SortNCol').style.backgroundColor = '';
+
         applyFiltersAndSorting();
     });
 
     document.getElementById('SortNCol').addEventListener('click', () => {
         filters.collab = false;
+
+        document.getElementById('SortNCol').style.backgroundColor = 'darkgray';
+        document.getElementById('SortCol').style.backgroundColor = '';
+
         applyFiltersAndSorting();
     });
 
     document.getElementById('SortMaP').addEventListener('click', () => {
         filters.material = 'plastic';
+
+        document.getElementById('SortMaP').style.backgroundColor = 'darkgray';
+        document.getElementById('SortMaM').style.backgroundColor = '';
+
         applyFiltersAndSorting();
     });
 
     document.getElementById('SortMaM').addEventListener('click', () => {
         filters.material = 'metal';
+
+        document.getElementById('SortMaM').style.backgroundColor = 'darkgray';
+        document.getElementById('SortMaP').style.backgroundColor = '';
+
         applyFiltersAndSorting();
     });
 
     document.getElementById('SortTyC').addEventListener('click', ()       => {
         filters.cup_type = 'cup';
+
+        document.getElementById('SortTyC').style.backgroundColor = 'darkgray';
+        document.getElementById('SortTyJ').style.backgroundColor = '';
+        document.getElementById('SortTyPx').style.backgroundColor = '';
+
         applyFiltersAndSorting();
     });
 
     document.getElementById('SortTyJ').addEventListener('click', ()       => {
         filters.cup_type = 'jug';
+
+        document.getElementById('SortTyJ').style.backgroundColor = 'darkgray';
+        document.getElementById('SortTyC').style.backgroundColor = '';
+        document.getElementById('SortTyPx').style.backgroundColor = '';
+
         applyFiltersAndSorting();
     });
 
     document.getElementById('SortTyPx').addEventListener('click', ()       => {
         filters.cup_type = 'pixel';
+
+        document.getElementById('SortTyPx').style.backgroundColor = 'darkgray';
+        document.getElementById('SortTyJ').style.backgroundColor = '';
+        document.getElementById('SortTyC').style.backgroundColor = '';
+
         applyFiltersAndSorting();
     });
 
@@ -204,6 +251,18 @@ function bindButtons() {
         filters.collab = null;
         sortMode = null;
         document.getElementById('SortSpf').value = '';
+
+        document.getElementById('SortAZ').style.backgroundColor = '';
+        document.getElementById('SortZA').style.backgroundColor = '';
+        document.getElementById('SortNO').style.backgroundColor = '';
+        document.getElementById('SortON').style.backgroundColor = '';
+        document.getElementById('SortCol').style.backgroundColor = '';
+        document.getElementById('SortNCol').style.backgroundColor = '';
+        document.getElementById('SortMaP').style.backgroundColor = '';
+        document.getElementById('SortMaM').style.backgroundColor = '';
+        document.getElementById('SortTyC').style.backgroundColor = '';
+        document.getElementById('SortTyJ').style.backgroundColor = '';
+        document.getElementById('SortTyPx').style.backgroundColor = '';
 
         applyFiltersAndSorting();
     });

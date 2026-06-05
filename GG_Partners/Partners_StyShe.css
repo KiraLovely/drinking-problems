@@ -42,9 +42,11 @@ header {
     max-width: 300px;
     background-color: #343a40;
     overflow: hidden;
+    text-align: center;
 }
+
 .partner-avatar {
     width: 100px;
     border-radius: 50%;
-    background-color: greenyellow;
+    border: 3px rebeccapurple solid;
 }

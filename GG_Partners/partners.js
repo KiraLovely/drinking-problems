@@ -22,13 +22,14 @@ async function loadPartners() {
 
         card.innerHTML = `
             <img src="${partner.creator_avatar}" class="partner-avatar" alt="${partner.creator_name}">
-            <h3>${partner.creator_name}</h3>
-            <p><strong>Title:</strong> ${partner.partner_title}</p>
-            <p><strong>First appearance:</strong> ${partner.first_appearance}</p>
-            <p><strong>Code:</strong>${partner.creator_code}</p>
-            <p><strong>Twitter:</strong> 
-                <a href="${partner.creator_twitter}" target="_blank">${partner.twitter}</a>
-            </p>
+            <p title="Creator name - Creator status/title"><strong>${partner.creator_name}</strong> - ${partner.partner_title}</p>
+            <p title="Gamersupps partner code"><strong>${partner.creator_code}</strong></p>
+            <p title="Date the creator joind GG">${partner.first_appearance}</p>
+            <div id="creator_socials">
+                <a id="creator_twitter" href="${partner.creator_twitter}" target="_blank"><strong>Twitter</strong></a>
+                <a id="creator_twitch" href="${partner.creator_twitch}" target="_blank"><strong>Twitch</strong></a>
+                <a id="creator_youtube" href="${partner.creator_youtube}" target="_blank"><strong>Youtube</strong></a>
+            </div>
         `;
 
         container.appendChild(card);
