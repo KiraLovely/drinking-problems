@@ -39,7 +39,7 @@
             <ul id="dropdownContentCons">
                 <li>
                     <a href="../Consumables/Tubs/Tubs_Main.html">
-                        Energy
+                        Tubs
                     </a>
                 </li>
                 <li>
@@ -96,42 +96,65 @@
 </nav>
 
 
+<div id="partner-container"></div>
+
+
 <footer>
     <a id="fleft" title="View frequently asked questions" href="../FAQ/FAQ_Main.html">FAQ</a>
     <a id="fright" title="View our Copyright, whatever" href="../Copyright/Copyright_Page.html">Copyright</a>
 
 
     <div id="write_mail_form">
-        <h2>Send us something!</h2>
-        <button title="Click to mail us!" class="newsletter-form" type="submit" onclick="window.location.href='mailto:kira@kiraminecraft.org'">Send us a mail!</button>
+        <h2>Send us a mail!</h2>
+        <button
+              id="mailButton" title="Click to mail us!" class="newsletter-form" type="submit"
+              onclick="alert('Our E-mail is currently unavailable, if you have questions or anything else, please join our discord to let us know!')"
+        >
+            Send us a mail!
+        </button>
     </div>
     <div id="news_letter_signup">
         <h2>Subscribe to our Newsletter</h2>
-        <form class="newsletter-form">
-            <input type="email" placeholder="Enter your email" required />
-            <button type="submit">Subscribe</button>
+        <form id="newsletter_form">
+            <label title="Email Input Field for Newsletter Subscription">
+                <input id="newsletter_Input" type="email" placeholder="Enter your email">
+            </label>
+            <button id="newsletter_Button" type="submit">
+                Subscribe
+            </button>
         </form>
     </div>
     <div id="explanation_text">
-        <h2 style="font-family: sans-serif, 'Inter Semi Bold'; text-align: center">What is this?</h2>
+        <h2 style="text-align: center">What is this Website about?</h2>
         <p>
-            This website is supposed to be an archive. Specifically, if you haven't noticed, for Gamersupps.
-            It's a fan-project, so nothing official. We ARE NOT Gamersupps, as so, we do NOT show any leaked content.
-            Anything ever made by Gamersupps, or anyone affiliated with them,
-            will be archived here. Why? Because WE love Gamersupps, and preserving it is important.
-            Many products go lost in time, or removed from the official website. That's why we decided, it's time to archive!
+
+            This website is supposed to be an archive for, specifically, if you haven't noticed, Gamersupps.
+            It's a fan-project, so nothing official. Anything ever made by Gamersupps, or anyone affiliated with them,
+            will be archived here. Why? Because WE love Gamersupps, and preserving their history is important to us.
+            (And because they aren't really doing anything themselves to preserve, well, nothing that's public).
+            Many products have been lost to time, and are removed from the official website.
+            That's why we've decided, it's time to archive! Because sometimes, you just want to know when and where!
+
         </p>
     </div>
     <div id="archive_partners">
-        <a title="Click to view!" href="../GGA_Partners/partners.html">View our official partners!</a>
+        <a style="padding: 2vw 2vw 2vw 0" title="Click to view!" href="../GGA_Partners/partners.html">View our official partners!</a>
     </div>
 
     <div id="sleft">
         <p id="s1">Our Socials</p>
-        <a class="Social_Button" id="sA"></a>
-        <a class="Social_Button" id="sB"></a>
-        <a class="Social_Button" id="sC"></a>
-        <a class="Social_Button" id="sD"></a>
+        <a class="Social_Button" id="sA" target="_blank" href="https://github.com/KiraLovely/drinking-problems">
+            <img alt="Github Logo" src="../Images/github-icon-1.png" height="50px">
+        </a>
+        <a class="Social_Button" id="sB" target="_blank" href="">
+            <img alt="Instagram Logo" src="../Images/insta_logo.png" height="50px">
+        </a>
+        <a class="Social_Button" id="sC" target="_blank" href="">
+            <img alt="Twitter Logo" src="../Images/X_Logo.png" height="50px">
+        </a>
+        <a class="Social_Button" id="sD" target="_blank" href="">
+            <img alt="Discord Logo" src="../Images/discord-6.png" height="35px">
+        </a>
     </div>
 
 
@@ -140,26 +163,25 @@
         <p id="s2">Gamersupps Socials</p>
 
         <a class="Social_Button" id="sgA" target="_blank" href="https://x.com/gamersupps">
-            <img src="../Images/X_Logo.png" height="50px">
+            <img src="../Images/X_Logo.png" alt="Gamersupps Twitter" height="50px">
         </a>
 
         <a class="Social_Button" id="sgB" target="_blank" href="https://www.instagram.com/gamersupps/">
-            <img src="../Images/insta_logo.png" height="50px">
+            <img src="../Images/insta_logo.png" alt="Gamersupps Instagram" height="50px">
         </a>
 
         <a class="Social_Button" id="sgC" target="_blank" href="https://www.tiktok.com/@gamersupps?source=h5_m">
-            <img src="../Images/tiktok_logo.png" height="50px">
+            <img src="../Images/tiktok_logo.png" alt="Gamersupps Tiktok" height="50px">
         </a>
 
     </div>
 </footer>
 
 
-<div id="partner-container"></div>
-
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
 <script src="partners.js"></script>
+<script src="../Important/universal.js"></script>
 
 </body>
 </html>

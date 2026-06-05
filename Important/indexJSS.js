@@ -114,7 +114,7 @@ async function getImage(name) {
 
 document.addEventListener('DOMContentLoaded', async () => {
     const logo = await getImage('loreLeakageLogo');
-    const fallBack = await getImage('fallBack');
+    const fallBack = 'Sorry! Image was unable to load properly!';
 
     document.getElementById('mainLogo').src = logo || fallBack;
 });
