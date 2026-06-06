@@ -1,9 +1,3 @@
-const supabaseUrl = 'https://qxidlnuurcfuqcsvwryb.supabase.co';
-const supabaseKey = 'sb_publishable_5WbTkW9HL-1tvaEsg1-WRQ_InP2IoLa';
-
-const supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
-
-
 let ALL_CUPS = [];
 let CURRENT_VIEW = [];
 
@@ -59,7 +53,7 @@ function renderCups(cups) {
         card.innerHTML = `
       <img src="${cup.cup_preview_image}" class="cup-preview" alt="${cup.cup_name}">
       <h4>${cup.cup_name}</h4>
-      <p>Creator: ${cup.partner_name ?? 'N/A'}</p>
+      <p>Creator: ${cup.partner_name ?? 'Gamersupps Original'}</p>
       <p>Artist: ${cup.artist_name ?? 'Unknown'}</p>
     `;
 
