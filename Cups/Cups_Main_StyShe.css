@@ -18,22 +18,7 @@ body {
 
 header {
     grid-area: header;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 0.4fr;
-    grid-template-areas: "leftBanner text rightBanner";
-}
-#waifuMainPageHeading{
-    grid-area: text;
     text-align: center;
-}
-#mainCupPageBannerLeft{
-    grid-area: leftBanner;
-    text-align: left;
-}
-#mainCupPageBannerLeft{
-    grid-area: rightBanner;
-    text-align: right;
 }
 
 
