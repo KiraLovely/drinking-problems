@@ -20,6 +20,9 @@ header {
     grid-area: header;
     text-align: center;
 }
+#cupsMainBanner{
+    width: 100%;
+}
 
 
 main {
