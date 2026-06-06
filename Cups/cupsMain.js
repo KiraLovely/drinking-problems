@@ -7,6 +7,30 @@ const supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
 let ALL_CUPS = [];
 let CURRENT_VIEW = [];
 
+async function getImage(name) {
+    const { data, error } = await supabaseClient
+        .from('loreLeakageImages')
+        .select('image_url')
+        .eq('image_name', name)
+        .single();
+
+    if (error || !data) {
+        console.error('Image load failed:', name, error);
+        return null;
+    }
+
+    return data.image_url;
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+    const logo = await getImage('cupsPageTopBanner');
+    const fallBack = 'Sorry! Image was unable to load properly!';
+
+    document.getElementById('cupsMainBanner').src = logo || fallBack;
+});
+
+
+//--------------------------------------------------------------------------------------------------
 
 async function loadCups() {
     const { data, error } = await supabaseClient
@@ -263,6 +287,7 @@ function bindButtons() {
         document.getElementById('SortTyC').style.backgroundColor = '';
         document.getElementById('SortTyJ').style.backgroundColor = '';
         document.getElementById('SortTyPx').style.backgroundColor = '';
+
 
         applyFiltersAndSorting();
     });

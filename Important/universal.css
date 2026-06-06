@@ -8,7 +8,7 @@ body h1, h2 {
 
 /*Navigation Bar*/
 nav {
-    background-color: #7b2cbf;
+    background-color: #571f94;
     color: white;
     font-family: sans-serif, 'Montserrat';
     font-optical-sizing: auto;
@@ -110,7 +110,7 @@ nav {
     bottom: -2px;
     width: 0;
     height: 2px;
-    background-color: #5a189a;
+    background-color: mediumpurple;
     transition: width 0.8s ease;
 }
 .Underline_Animation:hover::after {
@@ -120,7 +120,7 @@ nav {
 
 /*Footer*/
 footer {
-    background-color: rebeccapurple;
+    background-color: #571f94;
     color: white;
     grid-area: footer;
     font-family: sans-serif, 'JetBrains Mono Medium';
