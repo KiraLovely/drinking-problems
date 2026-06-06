@@ -1,6 +1,7 @@
 body{
-    display:grid;
-    grid-template-rows: auto 2fr 1fr;
+    background-color: black;
+    color: white;
+    grid-template-rows: auto 1fr 1fr;
     grid-template-areas: 'navBar' 'main' 'footer';
 }
 main{

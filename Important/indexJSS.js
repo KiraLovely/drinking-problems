@@ -1,7 +1,3 @@
-const supabaseUrl = 'https://qxidlnuurcfuqcsvwryb.supabase.co';
-const supabaseKey = 'sb_publishable_5WbTkW9HL-1tvaEsg1-WRQ_InP2IoLa';
-
-const supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
 // --------- Smooth scroll for Banner bar, mouse drag and mobile support ---------
 
 (function () {
