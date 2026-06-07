@@ -1,0 +1,25 @@
+body{
+    background-color: #212529;
+    color: white;
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto 1fr auto 1fr;
+    grid-template-areas:
+            'navBar navBar'
+            'avatar creatorExtInfo'
+            'creatorProducts creatorProdcuts'
+            'footer footer';
+}
+#creatorAvatarContainer{
+    grid-area: avatar;
+    padding-top: 1vw;
+    text-align: center;
+}
+#creatorContainer{
+    grid-area: creatorExtInfo;
+    padding-top: 1vw;
+    padding-left: 2vw;
+}
+#creatorProductArea{
+    grid-area: creatorProducts;
+}

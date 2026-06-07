@@ -6,7 +6,7 @@
     <meta name="description" content="A fan-made Gamersupps GG Archive - This is the Partner Page. Every Partner will be Archived.">
     <meta name="keywords" content="Gamersupps, GG, Waifu,Cups , Archive">
 
-    <link rel="stylesheet" href="Partners_StyShe.css">
+    <link rel="stylesheet" href="partnerArticleStyle.css">
     <link rel="icon" href="../Images/LogoSmall.ico">
     <link rel="stylesheet" href="../Important/universal.css">
 
@@ -17,12 +17,6 @@
     <title>GG-Vault</title>
 </head>
 <body>
-
-
-<header>
-    <h1>Gamersupps Partners</h1>
-    <p>Every Gamersupps Partner. Has or had a code? Then you'll find them here!</p>
-</header>
 
 <nav>
     <a id="Home_Nav" title="Go back to the Home-page" href="../index.html">
@@ -85,9 +79,9 @@
 
     <label id="Search_Nav" title="Search for specific categories or items">
         <input
-              type="text"
-              id="searchfield"
-              placeholder="Search archive.."
+                type="text"
+                id="searchfield"
+                placeholder="Search archive.."
         >
         <button id="searchButton">
             Search
@@ -95,9 +89,11 @@
     </label>
 </nav>
 
+<div id="creatorAvatarContainer"></div>
 
-<div id="partner-container"></div>
+<div id="creatorContainer"></div>
 
+<div id="creatorProductArea"></div>
 
 <footer>
     <a id="fleft" title="View frequently asked questions" href="../FAQ/FAQ_Main.html">FAQ</a>
@@ -168,11 +164,9 @@
     </div>
 </footer>
 
-
-
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
 <script src="../Important/universal.js"></script>
-<script src="partners.js"></script>
+<script src="partnerArticle.js"></script>
 
 </body>
 </html>
