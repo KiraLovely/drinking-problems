@@ -25,24 +25,6 @@ dropdown.addEventListener('mouseenter', showDropdown);
 dropdown.addEventListener('mouseleave', hideDropdown);
 
 
-// --------- Email Input thing for Newsletter Footer ---------
-
-document.getElementById("newsletter_form").addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    const emailRaw = document.getElementById("newsletter_Input").value.trim();
-
-    if(!emailRaw || !emailRaw.includes("@")){
-        alert("Please enter a valid email to proceed.");
-        return;
-    }
-
-    const email = encodeURIComponent(emailRaw);
-
-    window.location.href = `Important/Newsletter_Forms/newslettertestformstest.html?email=${email}`;
-});
-
-
 // --------- NavBar Icon Fetch ---------
 const supabaseUrl = 'https://qxidlnuurcfuqcsvwryb.supabase.co';
 const supabaseKey = 'sb_publishable_5WbTkW9HL-1tvaEsg1-WRQ_InP2IoLa';
