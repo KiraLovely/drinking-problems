@@ -23,3 +23,7 @@ body{
 #creatorProductArea{
     grid-area: creatorProducts;
 }
+
+.creator-avatar-large{
+    border: 3px rebeccapurple solid;
+}

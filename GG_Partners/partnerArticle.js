@@ -29,11 +29,12 @@ async function loadCreator(){
                 
             <h1>${partner.creator_name}</h1>
             <p>Creator-status: <strong>${partner.partner_title}</strong></p>
+            <p>Code: <strong>${partner.creator_code}</strong></p>
         `
 
         container.innerHTML = `
         <div class="creator-profile">
-            <h2>Code: ${partner.creator_code}</h2>
+            <p>Info</p>
         </div>
         `
     }
@@ -41,4 +42,30 @@ async function loadCreator(){
     renderCreator(data);
 }
 
+async function loadCreatorItems(){
+    const creatorName = getCreatorFromURL();
+
+    const{data, error} = await supabaseClient
+        .from('waifuCups')
+        .select('*')
+        .eq('partner_name', creatorName);
+
+
+    if (error || !data || data.length === 0) {
+        console.error("This creator doesn't have any GG Items", error);
+        return;
+    }
+    function renderItems(items) {
+        const containerItem = document.getElementById('creatorProductArea');
+
+        containerItem.innerHTML = items.map(item => `
+            <img width="50%" alt="test" src="${item.cup_preview_image}">
+        `).join('');
+    }
+
+
+    renderItems(data);
+}
+
 loadCreator();
+setTimeout(loadCreatorItems, 500);
