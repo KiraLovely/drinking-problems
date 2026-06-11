@@ -34,9 +34,17 @@ async function loadCreator(){
 
         container.innerHTML = `
         <div class="creator-profile">
-            <p>Info</p>
+            <a href="${partner.creator_twitter}">Twitter</a>
+            <div class="partialOwnersInfo"></div>
         </div>
         `
+        const partialOwners = container.querySelector('.partialOwnersInfo');
+
+        if(partner.partner_title === 'Partial Owner'){
+         partialOwners.innerHTML = '<p>This is a Partial Owner of Gamersupps</p>'
+        }else{
+            consol.log = 'Creator is Partner only';
+        }
     }
 
     renderCreator(data);
@@ -44,6 +52,7 @@ async function loadCreator(){
 
 async function loadCreatorItems(){
     const creatorName = getCreatorFromURL();
+
 
     const{data, error} = await supabaseClient
         .from('waifuCups')
