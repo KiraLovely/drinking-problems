@@ -7,7 +7,7 @@ body{
     grid-template-areas:
             'navBar navBar'
             'avatar creatorExtInfo'
-            'creatorProducts creatorProdcuts'
+            'creatorProducts creatorProducts'
             'footer footer';
 }
 #creatorAvatarContainer{
@@ -22,6 +22,9 @@ body{
 }
 #creatorProductArea{
     grid-area: creatorProducts;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
 }
 
 .creator-avatar-large{

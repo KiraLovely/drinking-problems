@@ -155,7 +155,7 @@ function bindButtons() {
     document.getElementById('SortAZ').addEventListener('click', () => {
         sortMode = 'AZ';
 
-        document.getElementById('SortAZ').style.backgroundColor = 'darkgray';
+        document.getElementById('SortAZ').style.backgroundColor = '#41126f';
         document.getElementById('SortZA').style.backgroundColor = '';
 
         applyFiltersAndSorting();
@@ -164,7 +164,7 @@ function bindButtons() {
     document.getElementById('SortZA').addEventListener('click', () => {
         sortMode = 'ZA';
 
-        document.getElementById('SortZA').style.backgroundColor = 'darkgray';
+        document.getElementById('SortZA').style.backgroundColor = '#41126f';
         document.getElementById('SortAZ').style.backgroundColor = '';
 
         applyFiltersAndSorting();
@@ -173,7 +173,7 @@ function bindButtons() {
     document.getElementById('SortNO').addEventListener('click', () => {
         sortMode = 'NEWEST';
 
-        document.getElementById('SortNO').style.backgroundColor = 'darkgray';
+        document.getElementById('SortNO').style.backgroundColor = '#41126f';
         document.getElementById('SortON').style.backgroundColor = '';
 
         applyFiltersAndSorting();
@@ -182,7 +182,7 @@ function bindButtons() {
     document.getElementById('SortON').addEventListener('click', () => {
         sortMode = 'OLDEST';
 
-        document.getElementById('SortON').style.backgroundColor = 'darkgray';
+        document.getElementById('SortON').style.backgroundColor = '#41126f';
         document.getElementById('SortNO').style.backgroundColor = '';
 
         applyFiltersAndSorting();
@@ -191,7 +191,7 @@ function bindButtons() {
     document.getElementById('SortCol').addEventListener('click', () => {
         filters.collab = true;
 
-        document.getElementById('SortCol').style.backgroundColor = 'darkgray';
+        document.getElementById('SortCol').style.backgroundColor = '#41126f';
         document.getElementById('SortNCol').style.backgroundColor = '';
 
         applyFiltersAndSorting();
@@ -200,7 +200,7 @@ function bindButtons() {
     document.getElementById('SortNCol').addEventListener('click', () => {
         filters.collab = false;
 
-        document.getElementById('SortNCol').style.backgroundColor = 'darkgray';
+        document.getElementById('SortNCol').style.backgroundColor = '#41126f';
         document.getElementById('SortCol').style.backgroundColor = '';
 
         applyFiltersAndSorting();
@@ -209,7 +209,7 @@ function bindButtons() {
     document.getElementById('SortMaP').addEventListener('click', () => {
         filters.material = 'plastic';
 
-        document.getElementById('SortMaP').style.backgroundColor = 'darkgray';
+        document.getElementById('SortMaP').style.backgroundColor = '#41126f';
         document.getElementById('SortMaM').style.backgroundColor = '';
 
         applyFiltersAndSorting();
@@ -218,7 +218,7 @@ function bindButtons() {
     document.getElementById('SortMaM').addEventListener('click', () => {
         filters.material = 'metal';
 
-        document.getElementById('SortMaM').style.backgroundColor = 'darkgray';
+        document.getElementById('SortMaM').style.backgroundColor = '#41126f';
         document.getElementById('SortMaP').style.backgroundColor = '';
 
         applyFiltersAndSorting();
@@ -227,7 +227,7 @@ function bindButtons() {
     document.getElementById('SortTyC').addEventListener('click', ()       => {
         filters.cup_type = 'cup';
 
-        document.getElementById('SortTyC').style.backgroundColor = 'darkgray';
+        document.getElementById('SortTyC').style.backgroundColor = '#41126f';
         document.getElementById('SortTyJ').style.backgroundColor = '';
         document.getElementById('SortTyPx').style.backgroundColor = '';
 
@@ -237,7 +237,7 @@ function bindButtons() {
     document.getElementById('SortTyJ').addEventListener('click', ()       => {
         filters.cup_type = 'jug';
 
-        document.getElementById('SortTyJ').style.backgroundColor = 'darkgray';
+        document.getElementById('SortTyJ').style.backgroundColor = '#41126f';
         document.getElementById('SortTyC').style.backgroundColor = '';
         document.getElementById('SortTyPx').style.backgroundColor = '';
 
@@ -247,7 +247,7 @@ function bindButtons() {
     document.getElementById('SortTyPx').addEventListener('click', ()       => {
         filters.cup_type = 'pixel';
 
-        document.getElementById('SortTyPx').style.backgroundColor = 'darkgray';
+        document.getElementById('SortTyPx').style.backgroundColor = '#41126f';
         document.getElementById('SortTyJ').style.backgroundColor = '';
         document.getElementById('SortTyC').style.backgroundColor = '';
 
