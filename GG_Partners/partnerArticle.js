@@ -76,5 +76,5 @@ async function loadCreatorItems(){
     renderItems(data);
 }
 
-loadCreator();
+void loadCreator();
 setTimeout(loadCreatorItems, 500);

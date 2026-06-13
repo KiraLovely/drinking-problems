@@ -6,7 +6,7 @@ body {
     grid-template-areas:
             "navBar"
             "header"
-            "cards"
+            "main"
             "footer";
 }
 body h1, h2 {
@@ -20,7 +20,21 @@ header {
     text-align: center;
     font-size: 150%;
 }
-
+main{
+    grid-area: main;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+            'partnerFilter' 'cards';
+}
+#partnerFilter{
+    grid-area: partnerFilter;
+    text-align: right;
+    padding-right: 1rem;
+}
+#partnerSearch{
+    font-size: 120%;
+}
 #partner-container {
     grid-area: cards;
     background-color: #212529;

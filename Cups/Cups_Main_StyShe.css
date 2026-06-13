@@ -47,6 +47,7 @@ main {
 #sorting_mechanism {
     grid-area: sorting_buttons;
     text-align: center;
+    padding-top: 1rem;
 }
 
 #plastic_container {
