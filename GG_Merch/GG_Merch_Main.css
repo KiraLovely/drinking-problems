@@ -15,21 +15,20 @@ main{
     text-align: center;
     grid-area: main;
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-areas: "leftBanner text rightBanner";
-}
-#mainText{
-    grid-area: text;
-}
-
-#merchBase{
-    grid-area: merchItems;
-    text-align: center;
+    grid-template-rows: 1fr auto auto;
+    grid-template-areas:
+            "banner"
+            "filter"
+            "container";
 }
 
-.merchBannerImgLeft{
-    grid-area: leftBanner;
+#merchContainer{
+    grid-area: container;
 }
-.merchBannerImgRight{
-    grid-area: rightBanner;
+#merchBannerImg{
+    grid-area: banner;
+}
+#merchFilter{
+    grid-area: filter;
+    padding-top: 1rem;
 }
