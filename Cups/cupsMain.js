@@ -259,7 +259,7 @@ function bindButtons() {
 
 
 
-        document.getElementById('SortSpf').addEventListener('input', (e) => {
+    document.getElementById('SortSpf').addEventListener('input', (e) => {
         filters.search = e.target.value.trim().toLowerCase();
         applyFiltersAndSorting();
     });
