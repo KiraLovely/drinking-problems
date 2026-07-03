@@ -23,6 +23,7 @@ main{
 }
 
 #merchContainer{
+    padding-top: 1rem;
     grid-area: container;
 }
 #merchBannerImg{
