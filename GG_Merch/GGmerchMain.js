@@ -50,7 +50,7 @@ function renderMerchItems(merchItems){
         card.classList.add('merchItem-card');
 
         card.innerHTML = `
-      <img src="${items.itemImage}" class="cup-preview" alt="${items.itemName}">
+      <img src="${items.itemImage}" class="merchItem-preview" alt="${items.itemName}">
       <h4>${items.itemName}</h4>
       <p>Creator: ${items.creatorName ?? 'Gamersupps Original'}</p>
       <p>${items.isWhat ?? 'Unknown'}</p>
