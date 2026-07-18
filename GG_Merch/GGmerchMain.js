@@ -50,7 +50,7 @@ function renderMerchItems(merchItems){
         card.classList.add('merchItem-card');
 
         card.innerHTML = `
-      <img src="${items.itemImage}" class="cup-preview" alt="${items.itemName}">
+      <img src="${items.itemImage}" class="merchItem-preview" alt="${items.itemName}">
       <h4>${items.itemName}</h4>
       <p>Creator: ${items.creatorName ?? 'Gamersupps Original'}</p>
       <p>${items.isWhat ?? 'Unknown'}</p>
@@ -66,6 +66,7 @@ function renderMerchItems(merchItems){
 const filters = {
     search: '',
     collab: null,
+    clothingType: null,
 };
 
 let sortMode = null;
@@ -107,6 +108,12 @@ function applyFiltersAndSorting(){
     if (filters.collab !== null) {
         result = result.filter(c =>
             c.collab_item === filters.collab
+        );
+    }
+
+    if (filters.clothingType) {
+        result = result.filter(item =>
+            item.isWhat === filters.clothingType
         );
     }
 
@@ -175,6 +182,14 @@ function bindButtons(){
         applyFiltersAndSorting();
     });
 
+    document.getElementById('merchIsWhatSelection').addEventListener('change', (e) => {
+        const value = e.target.value;
+
+        filters.clothingType = value || null;
+
+        applyFiltersAndSorting();
+    })
+
     document.getElementById('merchSortSearch').addEventListener('input', (e) => {
         filters.search = e.target.value.trim().toLowerCase();
         applyFiltersAndSorting();
@@ -183,6 +198,7 @@ function bindButtons(){
     document.getElementById('merchResetFilters').addEventListener('click', () => {
         filters.collab = null;
         filters.search = '';
+        filters.clothingType = null;
         sortMode = null;
 
         document.getElementById('merchSortAZ').style.backgroundColor = '';

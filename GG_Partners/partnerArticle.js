@@ -41,7 +41,9 @@ async function loadCreator(){
         const partialOwners = container.querySelector('.partialOwnersInfo');
 
         if(partner.partner_title === 'Partial Owner'){
-         partialOwners.innerHTML = '<p>This is a Partial Owner of Gamersupps</p>'
+         partialOwners.innerHTML = '<p>This is a Partial Owner of Gamersupps!</p>'
+        }else if(partner.partner_title === 'Owner'){
+            partialOwners.innerHTML = '<p>This is the Owner of Gamersupps!</p>'
         }else{
             consol.log = 'Creator is Partner only';
         }
