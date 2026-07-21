@@ -45,7 +45,7 @@ async function loadCreator(){
         }else if(partner.partner_title === 'Owner'){
             partialOwners.innerHTML = '<p>This is the Owner of Gamersupps!</p>'
         }else{
-            consol.log = 'Creator is Partner only';
+            console.log('Creator is Partner only');
         }
     }
 
@@ -56,26 +56,48 @@ async function loadCreatorItems(){
     const creatorName = getCreatorFromURL();
 
 
-    const{data, error} = await supabaseClient
+    const{data: cups} = await supabaseClient
         .from('waifuCups')
         .select('*')
         .eq('partner_name', creatorName);
 
+    const{data: merch} = await supabaseClient
+        .from('merchItems')
+        .select('*')
+        .eq('creatorName', creatorName);
 
-    if (error || !data || data.length === 0) {
-        console.error("This creator doesn't have any GG Items", error);
-        return;
-    }
+    const{data: accessories} = await supabaseClient
+        .from('accessories')
+        .select('*')
+        .eq('creatorName', creatorName);
+
+    const items = [
+        ...cups.map(item => ({
+            ...item,
+            image: item.cup_preview_image,
+            type: 'cup'
+        })),
+        ...merch.map(item => ({
+            ...item,
+            image: item.itemImage,
+            type: 'merch'
+        })),
+        ...accessories.map(item => ({
+            ...item,
+            image: item.itemImage,
+            type: 'accessory'
+        }))
+    ];
     function renderItems(items) {
         const containerItem = document.getElementById('creatorProductArea');
 
         containerItem.innerHTML = items.map(item => `
-            <img width="50%" alt="test" src="${item.cup_preview_image}">
+            <img alt="test" src=${item.image}>
         `).join('');
     }
 
 
-    renderItems(data);
+    renderItems(items);
 }
 
 void loadCreator();

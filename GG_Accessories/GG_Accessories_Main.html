@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Kira">
-    <meta name="description" content="A fan-made Gamersupps GG Archive - This is the VCard section. Everything you'll want to know about VCards.">
+    <meta name="description" content="A fan-made Gamersupps GG Archive - This is the accessories page. Everything you'll need to know about GG accessories.">
     <meta name="keywords" content="Gamersupps, GG, Waifu,Cups , Archive">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="VCards_Main.css">
+    <link rel="stylesheet" href="GG_Accessories_Style.css">
     <link rel="stylesheet" href="../Important/universal.css">
     <link rel="icon" href="../Images/LogoSmall.ico">
 
@@ -18,6 +18,8 @@
     <title>LoreLeakage</title>
 </head>
 <body>
+
+
 <nav>
     <a id="Home_Nav" title="Go back to the Home-page" href="../index.html">
         <img id="HomeImg_Nav" alt="Archive Logo" src="" width="50px">
@@ -94,7 +96,30 @@
 </nav>
 
 <main>
-    Lorem ipsum dolor sit amet.
+    <img id="accessoriesBannerImg" alt="accessories banner" src="" width="100%">
+
+    <div id="accessoriesFilter">
+        <button class="filterSortAccessories" id="accessoriesSortAZ"><span>A to Z</span></button>
+        <button class="filterSortAccessories" id="accessoriesSortZA"><span>Z to A</span></button>
+        <button class="filterSortAccessories" id="accessoriesSortNO"><span>New to Old</span></button>
+        <button class="filterSortAccessories" id="accessoriesSortON"><span>Old to New</span></button>
+        <button class="filterSortAccessories" id="accessoriesSortCol"><span>Collab</span></button>
+        <button class="filterSortAccessories" id="accessoriesSortNCol"><span>Non-Collab</span></button>
+        <button class="filterSortAccessories" id="accessoriesResetFilters"><span>Reset</span></button>
+
+        <label for="accessoriesIsWhatSelection">
+            <select name="isWhatAccessories" id="accessoriesIsWhatSelection">
+                <option value="">ALL</option>
+                <option value="Bag">Bag</option>
+            </select>
+        </label>
+
+        <label for="accessoriesSortSearch">
+            <input id="accessoriesSortSearch" type="text" placeholder="Search for an item..">
+        </label>
+    </div>
+
+    <div id="accessoriesContainer"></div>
 </main>
 
 <footer>
@@ -168,6 +193,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
 <script src="../Important/universal.js"></script>
+<script src="GGaccessories.js"></script>
 
 </body>
 </html>

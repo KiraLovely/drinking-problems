@@ -26,8 +26,8 @@ nav {
     text-align: center;
 
     display: grid;
-    grid-template-columns: 8vw repeat(6,auto);
-    grid-template-areas:"logo cups consumables merch vcards partners searchBar";
+    grid-template-columns: 8vw repeat(7,auto);
+    grid-template-areas:"logo cups consumables merch accessories vcards partners searchBar";
 }
 
 #Home_Nav {
@@ -75,6 +75,9 @@ nav {
 }
 #Merch_Nav {
     grid-area: merch;
+}
+#Accessories_Nav {
+    grid-area: accessories
 }
 #VCards_Nav {
     grid-area: vcards;
