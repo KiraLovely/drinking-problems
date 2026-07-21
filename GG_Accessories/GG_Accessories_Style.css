@@ -22,22 +22,22 @@ main{
             "container";
 }
 
-#merchContainer{
+#accessoriesContainer{
     grid-area: container;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
     padding: 1rem;
 }
-#merchBannerImg{
+#accessoriesBannerImg{
     grid-area: banner;
 }
-#merchFilter{
+#accessoriesFilter{
     grid-area: filter;
     padding-top: 1rem;
 }
 
-.merchItem-card {
+.accessoireItem-card {
     border: 2px solid #5a189a;
     color: white;
     border-radius: 8px;
@@ -46,12 +46,12 @@ main{
     max-width: 300px;
     background-color: #343a40;
 }
-.merchItem-preview {
+.accessoireItem-preview {
     width: 100%;
 }
 
 /*Button Design*/
-.filterSortMerch {
+.filterSortAccessories {
     font-size: 20px;
     line-height: 1.5;
     color: inherit;
@@ -68,7 +68,7 @@ main{
     overflow: hidden;
     position: relative;
 }
-.filterSortMerch:before{
+.filterSortAccessories:before{
     content: '';
     position: absolute;
     top: 100%;
@@ -79,13 +79,13 @@ main{
     transition: all 0.3s ease-in-out;
     transform: rotate(-45deg);
 }
-.filterSortMerch:hover:before {
+.filterSortAccessories:hover:before {
     top: 0;
     left: -160%;
     width: 380%;
     height: 800%;
 }
-.filterSortMerch:active:before{
+.filterSortAccessories:active:before{
     transition: all 0.1s ease-in-out;
     background-color: #7d21d9;
 }
@@ -97,7 +97,7 @@ span {
     top: 0;
 
 }
-.filterSortMerch:hover span {
+.filterSortAccessories:hover span {
     top: -100% !important;
 }
 span:after {
@@ -109,12 +109,12 @@ span:after {
 }
 
 /*Extra Button Design*/
-#merchSortSearch{
+#accessoriesSortSearch{
     border-radius: 4px;
     font-size: 100%;
     margin-top: 1rem;
 }
-#merchIsWhatSelection{
+#accessoriesIsWhatSelection{
     border-radius: 4px;
     font-size: 100%;
     margin-top: 1rem;
