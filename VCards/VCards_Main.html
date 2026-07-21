@@ -18,6 +18,7 @@
     <title>LoreLeakage</title>
 </head>
 <body>
+
 <nav>
     <a id="Home_Nav" title="Go back to the Home-page" href="../index.html">
         <img id="HomeImg_Nav" alt="Archive Logo" src="" width="50px">
@@ -93,9 +94,47 @@
     </label>
 </nav>
 
+
 <main>
-    Lorem ipsum dolor sit amet.
+    <img id="vcardMainBanner" alt="VCard main/top banner" src="">
+
+    <div id="vcardFilter">
+        <button class="filterSortVCards" id="vcardSortAZ"><span>A to Z</span></button>
+        <button class="filterSortVCards" id="vcardSortZA"><span>Z to A</span></button>
+        <button class="filterSortVCards" id="vcardSortNO"><span>Newest to Oldest</span></button>
+        <button class="filterSortVCards" id="vcardSortON"><span>Oldest to Newest</span></button>
+        <button class="filterSortVCards" id="vcardSortEC"><span>Error Cards</span></button>
+        <button class="filterSortVCards" id="ResetFilters"><span>Reset</span></button>
+
+        <label for="vcardAccessories">
+            <select name='VCardAccessories' id="vcardAccessories">
+                <option value="">ALL-ACCES.</option>
+                <option value="Binder">Binder</option>
+                <option value="DeckBox">Deck-box</option>
+                <option value="StarterKit">Starter-Kits</option>
+                <option value="Playmat">Playmat</option>
+                <option value="Sleeves">Sleeves</option>
+                <option value="Protectors">Protectors</option>
+            </select>
+        </label>
+
+        <label for="vcardMerch">
+            <select name='VCardMerch' id="vcardMerch">
+                <option value="">ALL-MERCH</option>
+                <option value="Clothing">Clothing</option>
+                <option value="Cup">Cups</option>
+                <option value="Other">Other</option>
+            </select>
+        </label>
+
+        <label for="vcardSearch">
+            <input placeholder="Search for an item.." id="vcardSearch">
+        </label>
+    </div>
+
+    <div id="vcardContainer"></div>
 </main>
+
 
 <footer>
     <a id="fleft" title="View frequently asked questions" href="../FAQ/FAQ_Main.html">FAQ</a>
@@ -168,6 +207,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
 <script src="../Important/universal.js"></script>
+<script src="VCards_Main.js"></script>
 
 </body>
 </html>
