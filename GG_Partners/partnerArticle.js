@@ -80,21 +80,25 @@ async function loadCreatorItems(){
         ...cups.map(item => ({
             ...item,
             image: item.cup_preview_image,
+            name: item.cup_name,
             type: 'cup'
         })),
         ...merch.map(item => ({
             ...item,
             image: item.itemImage,
+            name: item.itemName,
             type: 'merch'
         })),
         ...accessories.map(item => ({
             ...item,
             image: item.itemImage,
+            name: item.itemName,
             type: 'accessory'
         })),
         ...vcards.map(item => ({
             ...item,
             image: item.itemImage,
+            name: item.itemName,
             type: 'vcard'
         }))
     ];
@@ -102,7 +106,10 @@ async function loadCreatorItems(){
         const containerItem = document.getElementById('creatorProductArea');
 
         containerItem.innerHTML = items.map(item => `
-            <img alt="test" src=${item.image}>
+            <div class="partnerItem">
+            <img class="partnerItemPreview" alt="test" src=${item.image}>
+            <p>${item.name}</p>
+            </div>
         `).join('');
     }
 
