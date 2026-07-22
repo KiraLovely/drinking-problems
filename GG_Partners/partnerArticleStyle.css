@@ -25,6 +25,20 @@ body{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1rem;
+    padding: 1rem;
+}
+.partnerItem {
+    border: 2px solid #5a189a;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    padding: 1em;
+    margin-bottom: 1em;
+    max-width: 300px;
+    background-color: #343a40;
+}
+.partnerItemPreview {
+    width: 100%;
 }
 
 .creator-avatar-large{
