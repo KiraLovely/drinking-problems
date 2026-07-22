@@ -71,6 +71,11 @@ async function loadCreatorItems(){
         .select('*')
         .eq('creatorName', creatorName);
 
+    const{data: vcards} = await supabaseClient
+        .from('vcardProducts')
+        .select('*')
+        .eq('creatorName', creatorName);
+
     const items = [
         ...cups.map(item => ({
             ...item,
@@ -86,6 +91,11 @@ async function loadCreatorItems(){
             ...item,
             image: item.itemImage,
             type: 'accessory'
+        })),
+        ...vcards.map(item => ({
+            ...item,
+            image: item.itemImage,
+            type: 'vcard'
         }))
     ];
     function renderItems(items) {
