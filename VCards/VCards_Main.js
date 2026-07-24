@@ -68,10 +68,19 @@ const filters = {
     collab: null,
     isWhichAccessorie: null,
     isWhichMerch: null,
+    isWhichSet: null,
     isCard: null,
 };
 
 let sortMode = null;
+
+function normalizeVCardName(name) {
+    if (!name) return '';
+
+    return name
+        .replace(/^vcard/i, '')
+        .trim();
+}
 
 function applyFiltersAndSorting(){
     if (!ALL_VCARD_ITEMS.length){
@@ -83,15 +92,15 @@ function applyFiltersAndSorting(){
 
     if (sortMode === 'AZ') {
         result.sort((a, b) =>
-            a.itemName
-                .localeCompare(b.itemName)
+            normalizeVCardName(a.itemName)
+                .localeCompare(normalizeVCardName(b.itemName))
         );
     }
 
     if (sortMode === 'ZA') {
         result.sort((a, b) =>
-            b.itemName
-                .localeCompare(a.itemName)
+                normalizeVCardName(b.itemName)
+                .localeCompare(normalizeVCardName(a.itemName))
         );
     }
 
@@ -116,6 +125,12 @@ function applyFiltersAndSorting(){
     if (filters.vcardMerch) {
         result = result.filter(item =>
             item.isWhichMerch === filters.vcardMerch
+        );
+    }
+
+    if (filters.vcardSet) {
+        result = result.filter(item =>
+            item.isWhatSet === filters.vcardSet
         );
     }
 
@@ -196,6 +211,14 @@ function bindButtons(){
         applyFiltersAndSorting();
     })
 
+    document.getElementById('vcardSet').addEventListener('change', (e) => {
+        const value = e.target.value;
+
+        filters.vcardSet = value || null;
+
+        applyFiltersAndSorting();
+    })
+
     document.getElementById('vcardSearch').addEventListener('input', (e) => {
         filters.search = e.target.value.trim().toLowerCase();
         applyFiltersAndSorting();
@@ -206,6 +229,7 @@ function bindButtons(){
         filters.search = '';
         filters.vcardAccessories = null;
         filters.vcardMerch = null;
+        filters.vcardSet = null;
         filters.isCard = null;
         sortMode = null;
 
