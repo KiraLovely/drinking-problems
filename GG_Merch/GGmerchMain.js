@@ -48,6 +48,12 @@ function renderMerchItems(merchItems){
     merchItems.forEach(items => {
         const card = document.createElement('div');
         card.classList.add('merchItem-card');
+        card.style.cursor = 'pointer'
+        // Makes the cards clickable, redirecting to article page
+        card.addEventListener('click', () => {
+            window.location.href =
+                `../archiveArticle.html?type=merch&slug=${items.slug}`;
+        });
 
         card.innerHTML = `
       <img src="${items.itemImage}" class="merchItem-preview" alt="${items.itemName}">

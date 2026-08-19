@@ -34,10 +34,11 @@ async function loadPartners() {
         partners.forEach(partner => {
             const card = document.createElement('div');
             card.classList.add('partner-card');
+            card.style.cursor = 'pointer'
             // Makes the partner cards clickable, redirecting to partner article page
             card.addEventListener('click', () => {
-                const creatorName = encodeURIComponent(partner.creator_name);
-                window.location.href = `GG_partnerArticle.html?creator=${creatorName}`
+                window.location.href =
+                        `../archiveArticle.html?type=partner&slug=${partner.slug}`;
             });
 
 
@@ -60,6 +61,7 @@ async function loadPartners() {
         `
             // Makes it so the avatar and socials from the card aren't redirecting to the partner article page
             const creatorAvatar = card.querySelector('.partner-avatar');
+            creatorAvatar.style.cursor = 'default';
             creatorAvatar.addEventListener('click', (event) => {
                 event.stopPropagation();
                 console.log('Avatar was clicked');
@@ -75,7 +77,7 @@ async function loadPartners() {
             const wompException = card.querySelector('.partner-avatar');
 
                 if (partner.creator_name === 'Shylily') {
-                    wompException.style.cursor = 'pointer';
+                    wompException.style.cursor = 'help';
 
                     wompException.addEventListener('click', () => {
                         const womp = new Audio('../Images/shylily-cute-womp-womp.mp3');
