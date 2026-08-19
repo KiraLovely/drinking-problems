@@ -49,6 +49,12 @@ function renderCups(cups) {
     cups.forEach(cup => {
         const card = document.createElement('div');
         card.classList.add('cup-card');
+        card.style.cursor = 'pointer'
+        // Makes the cards clickable, redirecting to article page
+        card.addEventListener('click', () => {
+            window.location.href =
+                `../archiveArticle.html?type=cup&slug=${cup.slug}`;
+        });
 
         card.innerHTML = `
       <img src="${cup.cup_preview_image}" class="cup-preview" alt="${cup.cup_name}">

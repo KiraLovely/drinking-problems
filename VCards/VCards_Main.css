@@ -21,9 +21,11 @@ main{
             "container";
 }
 
+#vcardBannerContainer {
+    grid-area: banner;
+}
 #vcardMainBanner {
     width: 100%;
-    grid-area: banner;
 }
 
 #vcardFilter {

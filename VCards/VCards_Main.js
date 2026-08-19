@@ -48,6 +48,12 @@ function renderVCardItems(vcardItems){
     vcardItems.forEach(items => {
         const card = document.createElement('div');
         card.classList.add('vcardItem-card');
+        card.style.cursor = 'pointer'
+        // Makes the cards clickable, redirecting to article page
+        card.addEventListener('click', () => {
+            window.location.href =
+                `../archiveArticle.html?type=vcard&slug=${items.slug}`;
+        });
 
         card.innerHTML = `
       <img src="${items.itemImage}" class="vcardItem-preview" alt="${items.itemName}">

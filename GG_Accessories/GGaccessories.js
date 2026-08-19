@@ -48,6 +48,12 @@ function renderAccessories(accessories){
     accessories.forEach(items => {
         const card = document.createElement('div');
         card.classList.add('accessoireItem-card');
+        card.style.cursor = 'pointer'
+        // Makes the cards clickable, redirecting to article page
+        card.addEventListener('click', () => {
+            window.location.href =
+                `../archiveArticle.html?type=accessory&slug=${items.slug}`;
+        });
 
         card.innerHTML = `
       <img src="${items.itemImage}" class="accessoireItem-preview" alt="${items.itemName}">
@@ -113,7 +119,7 @@ function applyFiltersAndSorting(){
 
     if (filters.accessoireType) {
         result = result.filter(item =>
-            item.isWhat === filters.accessoireType
+            item.isWhichCategory === filters.accessoireType
         );
     }
 
