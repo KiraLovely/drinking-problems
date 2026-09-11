@@ -19,7 +19,7 @@ nav {
     padding-top: 0.25vw;
     position:sticky;
     top:0;
-    z-index: 3;
+    z-index: 10;
 
     align-content: center;
     align-items: center;
@@ -129,6 +129,7 @@ footer {
     font-family: sans-serif, 'JetBrains Mono Medium';
     font-weight: bold;
     padding-bottom: 4vw;
+    z-index: 9;
 
     display: grid;
     grid-template-columns: 1fr 1fr 3fr 3fr 1fr 1fr;
@@ -199,8 +200,8 @@ footer h2, h1 {
     grid-template-columns: auto auto auto auto;
     grid-template-rows: auto auto;
     grid-template-areas:
-            ". OurS OurS ."
-            "OurSa OurSb OurSc OurSd";
+            "OurS OurS"
+            "OurSa OurSd";
 }
 #s1 {
     grid-area: OurS;
@@ -208,14 +209,6 @@ footer h2, h1 {
 #sA {
     grid-area: OurSa;
     background-color: white;
-}
-#sB {
-    grid-area: OurSb;
-    overflow: hidden;
-}
-#sC {
-    grid-area: OurSc;
-    overflow: hidden;
 }
 #sD {
     grid-area: OurSd;
@@ -278,12 +271,30 @@ footer h2, h1 {
 
 /*Hyperlink Styling*/
 a:visited {
-    color: white;
+    color: #620062;
 }
 a:link {
-    color: white;
+    color: magenta;
     text-decoration: none;
 }
 a:hover {
-    color: lightgray;
+    color: darkmagenta;
+}
+nav a:link {
+    color: white
+}
+nav a:visited {
+    color: whitesmoke;
+}
+nav a:hover {
+    color: #b0b0b0;
+}
+footer a:link {
+    color: white
+}
+footer a:visited {
+    color: whitesmoke;
+}
+footer a:hover {
+    color: #b0b0b0;
 }

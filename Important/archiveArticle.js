@@ -32,7 +32,7 @@ async function loadArticle() {
 
     renderArticle(data, type);
 
-    if(type === 'partner'){
+    if (type === 'partner') {
         await loadCreatorItems(data.creator_name);
     }
 }
@@ -44,61 +44,76 @@ function renderPartner(item) {
     let ownerInfo = '';
 
     if (item.partner_title === 'Partial Owner') {
-        ownerInfo = '<p>This is a Partial Owner of Gamersupps!</p>';
-    }
-    else if (item.partner_title === 'Owner') {
-        ownerInfo = '<p>This is the Owner of Gamersupps!</p>';
+        ownerInfo =
+            'From different sources, it is stated that ' +
+            item.creator_name + ' apparently owns about ' +
+            item.equityShares_percentage +
+            ' of shares of Gamersupps. Percentages are not yet confirmed by Gamersupps.';
+    } else if (item.partner_title === 'Owner') {
+        ownerInfo =
+            'From different sources, it is stated that he owns about 70% of the companies-shares. This is not yet confirmed by Gamersupps.' +
+            '<br>JSchlatt is not one of the original founders of GG. He acquired all his shares in May 2022.';
     }
 
     return `
         <div id="itemPreview">
-            <img src="${item.creator_avatar}" alt="${item.creator_name}">
-            <h1>${item.creator_name}</h1>
+            <img style="border-radius: 6%" height="350rem" src="${item.creator_avatar}" alt="${item.creator_name}">
+            <h2>
+                <strong>Code:</strong>
+                ${item.creator_code}
+            </h2>
         </div>
         
         <div id="itemBasicText">
+            <h1>${item.creator_name}</h1>
             <p>
-                Creator-status:
-                <strong>${item.partner_title}</strong>
+                <strong>First-appearance:</strong>
+                ${item.first_appearance}
             </p>
-    
             <p>
-                Code:
-                <strong>${item.creator_code}</strong>
+                <strong>Creator-status:</strong>
+                ${item.partner_title}
             </p>
-    
-            <div class="creator-profile">
+            
+            <div class="partialOwnersInfo">
+                    ${ownerInfo}
+            </div>
+            <hr>
+                
+            <div class="creatorSocials"> 
                 <a target="_blank" href = "${item.creator_twitter}">
                 Twitter
                 </a>
-    
-                <div class="partialOwnersInfo">
-                    ${ownerInfo}
-                </div>
+                <a target="_blank" href = "${item.creator_youtube}">
+                YouTube
+                </a>
+                <a target="_blank" href = "${item.creator_twitch}">
+                Twitch
+                </a>
             </div> 
         </div>
-        <div id="itemExtraText"></div>
+        <div id="itemExtraText">${item.extraInfo}</div>
     `;
 }
 
-async function loadCreatorItems(creatorName){
+async function loadCreatorItems(creatorName) {
 
-    const{data: cups} = await supabaseClient
+    const {data: cups} = await supabaseClient
         .from('waifuCups')
         .select('*')
         .eq('partner_name', creatorName);
 
-    const{data: merch} = await supabaseClient
+    const {data: merch} = await supabaseClient
         .from('merchItems')
         .select('*')
         .eq('creatorName', creatorName);
 
-    const{data: accessories} = await supabaseClient
+    const {data: accessories} = await supabaseClient
         .from('accessories')
         .select('*')
         .eq('creatorName', creatorName);
 
-    const{data: vcards} = await supabaseClient
+    const {data: vcards} = await supabaseClient
         .from('vcardProducts')
         .select('*')
         .eq('creatorName', creatorName);
@@ -108,32 +123,40 @@ async function loadCreatorItems(creatorName){
             ...item,
             image: item.cup_preview_image,
             name: item.cup_name,
-            type: 'cup'
+            url: item.slug,
+            type: 'cup',
         })),
         ...merch.map(item => ({
             ...item,
             image: item.itemImage,
             name: item.itemName,
-            type: 'merch'
+            url: item.slug,
+            type: 'merch',
         })),
         ...accessories.map(item => ({
             ...item,
             image: item.itemImage,
             name: item.itemName,
-            type: 'accessory'
+            url: item.slug,
+            type: 'accessory',
         })),
         ...vcards.map(item => ({
             ...item,
             image: item.itemImage,
             name: item.itemName,
-            type: 'vcard'
+            url: item.slug,
+            type: 'vcard',
         }))
     ];
+
     function renderPartnerItems(items) {
         const containerItem = document.getElementById('creatorProductArea');
 
         containerItem.innerHTML = items.map(item => `
-            <div class="partnerItem">
+            <div class="partnerItem"
+                 onclick="window.location.href='../archiveArticle.html?type=${item.type}&slug=${item.url}'"
+                 style="cursor: pointer">
+                 
             <img class="partnerItemPreview" alt="test" src=${item.image}>
             <p>${item.name}</p>
             </div>
@@ -171,8 +194,8 @@ function renderAccessory(item) {
 
 function renderVCard(item) {
     return `
-        <img src="${item.cardImage}" alt="${item.card_name}">
-        <h1>${item.card_name}</h1>
+        <img src="${item.itemImage}" alt="${item.itemName}">
+        <h1>${item.itemName}</h1>
         <div>${item.article_text ?? ''}</div>
     `;
 }

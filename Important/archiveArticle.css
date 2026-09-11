@@ -15,20 +15,27 @@ body{
     padding-top: 1vw;
     padding-left: 2vw;
     display: grid;
+    grid-template-columns: 25vw 70vw;
     grid-template-areas:
             'avatar basicText'
             'extraText extraText'
 }
-.itemPreview{
+#article_content h1{
+    text-decoration: underline white solid;
+}
+
+#itemPreview{
     grid-area: avatar;
     padding-top: 1vw;
-    text-align: center;
 }
-.itemBasicText{
+
+#itemBasicText{
     grid-area: basicText;
 }
-.itemExtraText{
+
+#itemExtraText{
     grid-area: extraText;
+    padding-bottom: 2vw;
 }
 
 #creatorProductArea{

@@ -78,7 +78,7 @@ header {
 }
 .hero div {
     text-align: center;
-    z-index: 3;
+    z-index: 2;
     color: white;
 }
 #bg-container {
@@ -119,6 +119,10 @@ header {
     text-align: center;
 
     font-size: 250%;
+    z-index: 3;
+}
+#main_title h1 {
+    margin: 0 0 0 0;
 }
 
 main {
@@ -142,6 +146,7 @@ main {
     user-select: none;
     -ms-overflow-style: none;
     overscroll-behavior: contain;
+    z-index: 3;
 }
 main::-webkit-scrollbar {
     display: none;
