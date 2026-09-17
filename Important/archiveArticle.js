@@ -53,6 +53,12 @@ function renderPartner(item) {
         ownerInfo =
             'From different sources, it is stated that he owns about 70% of the companies-shares. This is not yet confirmed by Gamersupps.' +
             '<br>JSchlatt is not one of the original founders of GG. He acquired all his shares in May 2022.';
+    } else if (item.partner_title === 'Partner' && item.equityShares_percentage !== '') {
+        ownerInfo =
+            'This creator was a partial Owner until' +
+            item.equitySharesSellingDate + '. From different sources, it is stated that ' +
+            item.creator_name + ' apparently had owned about ' +
+            item.equityShares_percentage + ' of shares of Gamersupps. Percentages were not confirmed by Gamersupps.';
     }
 
     return `
@@ -191,7 +197,7 @@ function renderCup(item) {
 
     return `
         <div id="itemPreview">
-            <img height="425rem" src="${item.cup_preview_image}" alt="${item.cup_name}">
+            <img height="400rem" src="${item.cup_preview_image}" alt="${item.cup_name}">
         </div>
         
         <div id="itemBasicText">

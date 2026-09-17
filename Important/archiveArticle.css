@@ -13,9 +13,9 @@ body{
 #article_content{
     grid-area: articleContents;
     padding-top: 1vw;
-    padding-left: 2vw;
+    padding-left: 1vw;
     display: grid;
-    grid-template-columns: 25vw 70vw;
+    grid-template-columns: 25vw 67vw;
     grid-template-areas:
             'avatar basicText'
             'extraText extraText'
