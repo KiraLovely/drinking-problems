@@ -2,8 +2,9 @@ body {
     background-color: #020204;
     color: white;
 
-    grid-template-rows: auto 2fr 1fr;
-    grid-template-areas: 'nav' 'main' 'footer';
+    display: grid;
+    grid-template-columns: auto 2fr 1fr;
+    grid-template-areas: 'navBar' 'main' 'footer';
 }
 main {
     grid-area: main;

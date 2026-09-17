@@ -55,7 +55,7 @@ function renderPartner(item) {
             '<br>JSchlatt is not one of the original founders of GG. He acquired all his shares in May 2022.';
     } else if (item.partner_title === 'Partner' && item.equityShares_percentage !== '') {
         ownerInfo =
-            'This creator was a partial Owner until' +
+            'This creator was a partial Owner until ' +
             item.equitySharesSellingDate + '. From different sources, it is stated that ' +
             item.creator_name + ' apparently had owned about ' +
             item.equityShares_percentage + ' of shares of Gamersupps. Percentages were not confirmed by Gamersupps.';
