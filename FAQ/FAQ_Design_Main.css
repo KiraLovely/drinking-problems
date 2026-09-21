@@ -1,4 +1,7 @@
 body{
+    background-color: black;
+    color: white;
+
     display:grid;
     grid-template-rows: auto 2fr 1fr;
     grid-template-areas: 'navBar' 'main' 'footer';

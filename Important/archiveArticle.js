@@ -53,6 +53,12 @@ function renderPartner(item) {
         ownerInfo =
             'From different sources, it is stated that he owns about 70% of the companies-shares. This is not yet confirmed by Gamersupps.' +
             '<br>JSchlatt is not one of the original founders of GG. He acquired all his shares in May 2022.';
+    } else if (item.partner_title === 'Partner' && item.equityShares_percentage !== '') {
+        ownerInfo =
+            'This creator was a partial Owner until ' +
+            item.equitySharesSellingDate + '. From different sources, it is stated that ' +
+            item.creator_name + ' apparently had owned about ' +
+            item.equityShares_percentage + ' of shares of Gamersupps. Percentages were not confirmed by Gamersupps.';
     }
 
     return `
@@ -92,6 +98,7 @@ function renderPartner(item) {
                 </a>
             </div> 
         </div>
+        
         <div id="itemExtraText">${item.extraInfo}</div>
     `;
 }
@@ -169,10 +176,38 @@ async function loadCreatorItems(creatorName) {
 
 
 function renderCup(item) {
+    let collabCreatorInfo = '';
+
+    let finalDate = '';
+    let cupDate = item.release_date;
+    let preOrderWindow = Temporal.PlainDate.from(cupDate);
+    preOrderWindow = preOrderWindow.add({ days: 14});
+
+    if (item.collab_cup === true) {
+        collabCreatorInfo = '<strong>Collaborating Creator(s):</strong> ' +  item.partner_name;
+    } else {
+        collabCreatorInfo = '<strong>Gamersupps Original Creation</strong>';
+    }
+
+    if (item.isPreOrder === true){
+        finalDate = `<strong>Estimated pre-order window:</strong> ${item.release_date} until ${preOrderWindow}`;
+    }else {
+        finalDate = '<strong>Release date: </strong>' + item.release_date;
+    }
+
     return `
-       <img src="${item.cup_preview_image}" alt="${item.cup_name}">
-        <h1>${item.cup_name}</h1>
-        <div>${item.article_text ?? ''}</div>
+        <div id="itemPreview">
+            <img height="400rem" src="${item.cup_preview_image}" alt="${item.cup_name}">
+        </div>
+        
+        <div id="itemBasicText">
+            <h1>${item.cup_name}</h1>
+            <p>${collabCreatorInfo}</p>
+            <p><strong>Cup-art Artist(s):</strong> ${item.artist_name}</p>
+            <p>${finalDate}</p>
+        </div>
+        
+        <div id="itemExtraText">${item.article_text ?? ''}</div>
     `;
 }
 
