@@ -4,6 +4,10 @@ body{
     grid-template-rows: auto 1fr 1fr;
     grid-template-areas: 'navBar' 'main' 'footer';
 }
+header {
+    grid-area: header;
+    text-align: center;
+}
 main{
     grid-area: main;
     text-align: center;
