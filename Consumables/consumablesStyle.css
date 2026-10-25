@@ -1,14 +1,67 @@
 body{
     background-color: black;
     color: white;
-    grid-template-rows: auto 1fr 1fr;
-    grid-template-areas: 'navBar' 'main' 'footer';
+
+    display:    grid;
+    column-gap: 0;
+    grid-template-rows: auto auto 35vw auto 1fr;
+    grid-template-areas:
+            'navBar'
+            'header'
+            'main'
+            'consArticles'
+            'footer';
 }
+#consArticles {
+    grid-area: consArticles;
+}
+
 header {
     grid-area: header;
     text-align: center;
 }
-main{
+
+main {
+    background-image: linear-gradient(black, black, #252525);
     grid-area: main;
+
+    align-content: center;
+    align-items: center;
     text-align: center;
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 19%;
+    column-gap: 3vw;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    cursor: grab;
+    user-select: none;
+    -ms-overflow-style: none;
+    overscroll-behavior: contain;
+    z-index: 3;
+}
+main::-webkit-scrollbar {
+    display: none;
+}
+main:focus {
+    outline: 3px solid white;
+    outline-offset: 4px;
+}
+
+.Banner {
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+.Banner_Animation {
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.15);
+    transition: box-shadow 0.3s ease-in-out;
+}
+.Banner_Animation:hover {
+    box-shadow: 1px 2px 5px rgba(255, 255, 255, 0.7)
 }
